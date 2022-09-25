@@ -6,6 +6,10 @@
 }
 */
 
+html {
+  background: rgba(57, 63, 84, 0.8);
+}
+
 @media screen and (max-width: 1920px) {
   .cardInput {
     width: 80%;
@@ -83,9 +87,6 @@
   .cardInfo button:hover {
     color:  #BFD2FF;
   }
-}
-body {
-  background: rgba(57, 63, 84, 0.8);
 }
 
 
