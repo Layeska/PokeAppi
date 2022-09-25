@@ -8,6 +8,7 @@
 :root {
   --pngCursor: url('https://img.icons8.com/fluency/48/000000/heart-plus.png');
   --bg-imgInput: url('./assets/bg-poke-input.jpg');
+  --bg-imgInputLittle: url('./assets/bg-poke-input2.jpg');
   --bg-html: rgb(0,0,0);
   --color-text-input: rgb(207, 207, 207);
   --color-focus-input: rgb(120, 120, 120);
@@ -74,6 +75,23 @@ html { background: var(--bg-html); }
 
 .cardInfo button:hover { color: var(--bg-html); }
 
+@media screen and (max-width: 570px) {
+  .cardInput .img {
+    margin-left: -45px;
+  }
+}
 
+@media screen and (max-width: 460px) {
+  .cardInput .img {
+    background-image: var(--bg-imgInputLittle);
+    width: 300px;
+    height: 220px;
+    margin: auto;
+    margin-top: 20%;
+  }
 
+  ::-webkit-input-placeholder { font-size: 20px; }
+
+  .cardInfo input:focus + .btn { font-size: 26px; margin-top: 5px;}
+}
 
