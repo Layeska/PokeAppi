@@ -5,120 +5,75 @@
   text-align: center;
 }
 */
-
-html {
-  background: rgba(57, 63, 84, 0.8);
+:root {
+  --pngCursor: url('https://img.icons8.com/fluency/48/000000/heart-plus.png');
+  --bg-imgInput: url('./assets/bg-poke-input.jpg');
+  --bg-html: rgb(0,0,0);
+  --color-text-input: rgb(207, 207, 207);
+  --color-focus-input: rgb(120, 120, 120);
 }
 
-@media screen and (max-width: 1920px) {
-  .cardInput {
-    width: 80%;
-    margin: auto;
-    margin-top: 10%;
-  }
-  
-  .cardInput .img {
-    background-image: url('/src/assets/f2.png');
-    background-repeat: no-repeat;
-    width: 400px;
-    height: 300px;
-    margin: 0 auto;
-  }
-  
-  
-  .cardInfo {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    background: rgba(57, 63, 84, 0.5);
-    backdrop-filter: blur(5px);
-    border-radius: 8px;
-    padding: 1.4rem 2rem 1.6rem;
-  }
-  
-  .cardInfo::after {
-    content: "";
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    z-index: 999;
-    height: 2px;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    background-position: 0% 0%;
-    background: linear-gradient(to right, #FED82D,#880E18, #FFFFFF,  #EA4E25, #880E18, #E67273, #FED82D);
-    background-size: 500% auto;
-    animation: gradient 2s linear infinite;
-  }
-  
-  .cardInfo input {
-    border-style: none; 
-    background: transparent;
-    outline: none;
-    flex-grow: 1;
-    color: #BFD2FF;
-    font-size: 1.8rem;
-    line-height: 2.4rem;
-    vertical-align: middle;
-    
-  }
-  
-  ::-webkit-input-placeholder {
-    color: #BFD2FF;
-  }
-  
-  .cardInfo button {
-    padding: 0; 
-    background: none; 
-    border: none; 
-    outline: none; 
-  
-    color:   #BFD2FF;
-    font-size: 2.4rem;
-    line-height: 2.4rem;
-    vertical-align: middle;
-    transition: color .25s;
-  }
-  
-  .cardInfo button:hover {
-    color:  #BFD2FF;
-  }
+html { background: var(--bg-html); }
+
+.principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.cardInput { margin: auto; }
 
-
-@media screen and (max-width: 500px) {
-  body {
-    background: saddlebrown;
-  }
-
-  .cardInput {
-    margin-top: 50%;
-    
-  }
-
-  .cardInput .img{
-    background-image: url('/src/assets/fff2.png');
-  }
-
-  .cardInfo {
-    margin-top: -80px;
-    max-width: 235px;
-    font-size: 8px;
-    height: 25px;
-  }
-
-  ::-webkit-input-placeholder{
-    font-size: 22.5px;
-  }
-
-  .cardInfo button {
-    margin-left: -140px;
-    margin-top: -6px;
-  }
+.cardInput .img {
+  background-image: var(--bg-imgInput);
+  background-repeat: no-repeat;
+  width: 560px;
+  height: 450px;
 }
+
+.cardInfo {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: center;
+  margin: auto;
+}
+
+.cardInfo input {
+  width: 60%;
+  flex-grow: 1;
+  outline: none;
+  font-size: 1.8rem;
+  border-style: none; 
+  line-height: 2.4rem;
+  vertical-align: middle;
+  background: transparent;
+  color: var(--color-text-input);
+}
+
+::-webkit-input-placeholder { color: var(--color-focus-input); }
+
+.cardInfo button {
+  padding: 0; 
+  background: none; 
+  border: none; 
+  outline: none; 
+  color: var(--bg-html);
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  vertical-align: middle;
+  transition: color .25s;
+  width: 10%;
+}
+
+.cardInfo button:active {
+  width: 50px;
+  cursor: var(--pngCursor), auto;
+}
+
+.cardInfo input:focus + .btn { color: var(--color-focus-input); }
+
+.cardInfo button:hover { color: var(--bg-html); }
+
+
+
 

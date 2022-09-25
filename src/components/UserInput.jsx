@@ -15,11 +15,13 @@ const UserInput = () => {
     }
 
     return (
-        <div className='cardInput'>
-            <div className='img'></div>
-            <div className='cardInfo'>
-                <input type="text" placeholder="What's your name?" value={name} onChange={e => setName(e.target.value)}/>
-                <button onClick={changeUserName}><i className='fa-solid fa-arrow-right'></i></button>
+        <div className='principal'>
+            <div className='cardInput'>
+                <div className='img'></div>
+                <div className='cardInfo'>
+                    <input type="text" placeholder="Hi!, What's your name?" value={name} onChange={e => setName(e.target.value)}/>
+                    <button onClick={changeUserName} className='btn'><i className='fa-solid fa-arrow-right'></i></button>
+                </div>
             </div>
         </div>
     )

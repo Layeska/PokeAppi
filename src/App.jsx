@@ -10,13 +10,17 @@ function App() {
   return (
     <HashRouter>
       <div>
-        <Routes>
+
+      
+      <Routes>
+        
           <Route path='/' element={<UserInput/>}/>
-          <Route element={<ProtectedRoute/>}>
-            <Route path='/pokemon' element={<PokemonList/>}/>
-            <Route path='/pokemon/:id' element={<PokemonDetails/>}/>
-          </Route>
-        </Routes>
+        
+        <Route element={<ProtectedRoute/>}>
+          <Route path='/pokemon' element={<PokemonList/>}/>
+          <Route path='/pokemon/:id' element={<PokemonDetails/>}/>
+        </Route>
+      </Routes>
       </div>
     </HashRouter>
   )
