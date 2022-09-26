@@ -188,6 +188,7 @@ html { background: var(--bg-html); color: var(--color-text-input);}
 .message {
   text-align: center;
   width: 40%;
+  font-size: 23px;
 }
 
 .ball {
@@ -202,6 +203,8 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   font-size: 25px;
   margin-left: -16%;
 }
+
+/*TODO: Media Queries */
 
 @media screen and (max-width: 960px) {
   body {
@@ -265,7 +268,6 @@ html { background: var(--bg-html); color: var(--color-text-input);}
 
   .container {
     margin-left: -100px;
-    /*background: saddlebrown;*/
   }
 
   .pokeBall {
@@ -285,16 +287,6 @@ html { background: var(--bg-html); color: var(--color-text-input);}
     width: 97.3%;
   }
 
-  /*.container {
-    margin-right: 20%;
-    background: bisque;
-
-  }*/
-
-  /*.message{
-    padding: 12px;
-  }
-  */
 }
 
 @media screen  and (max-width: 591px )  {
@@ -307,10 +299,7 @@ html { background: var(--bg-html); color: var(--color-text-input);}
     height: 80px;
   }
 
-  /*.container {
-    background: wheat;
-  }
-*/
+
   .ball .pokeBall {
     width: 50px;
     height: 50px;
@@ -335,11 +324,6 @@ html { background: var(--bg-html); color: var(--color-text-input);}
     width: 200px;
     height: 80px;
   }
-
-  /*.container {
-   
-    background: seashell;
-  }*/
 
   .message {
     font-size: 15px;
