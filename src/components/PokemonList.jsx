@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import { useEffect, useState } from 'react'
 
 import PokemonCard from './PokemonCard'
+import TopBar from './styles/TopBar'
 import usePagination from '../hook/usePagination'
 import useApi from '../hook/useApi'
 
@@ -41,6 +42,7 @@ const PokemonList = () => {
             {changeData}
 
             <h1>Pokemon</h1>
+            <TopBar/>
             <h3>Welcome User {name}</h3>
             <button onClick={() => setPages(pages - 1)} disabled={pages === 1}><i className="fa-sharp fa-solid fa-caret-left"></i></button>
             {
