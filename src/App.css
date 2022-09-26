@@ -142,3 +142,12 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   font-size: 15px;
   background: salmon;
 }
+
+/*-------- Pokemon List --------*/
+.btnIndex:focus {
+  background: rgb(37, 69, 51);
+}
+
+.btnIndex::before {
+  background: rebeccapurple;
+}
