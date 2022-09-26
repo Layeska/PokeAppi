@@ -73,7 +73,7 @@ const PokemonList = () => {
             <div className='pokemon-container'>
                 {
                     pokemonPaginated.map(poke => (
-                        <PokemonCard url={poke.url ? poke.url : poke.pokemon.url} key={poke.url ? poke.url : poke.pokemon.url}/>
+                        <PokemonCard url={poke.url ? poke.url : poke.pokemon.url} key={poke.id ? poke.id : poke.pokemon?.id}/>
                     ))
                 }
             </div>

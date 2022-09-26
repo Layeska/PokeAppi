@@ -204,9 +204,15 @@ html { background: var(--bg-html); color: var(--color-text-input);}
 }
 
 @media screen and (max-width: 960px) {
-  /*body {
+  body {
     background: salmon;
-  }*/
+  }
+
+  .ball .pokeBall {
+    width: 65px;
+    height: 64px;
+    margin-top: 4px;
+  }
 
   .ball {
     width: 35%;
@@ -215,9 +221,9 @@ html { background: var(--bg-html); color: var(--color-text-input);}
 }
 
 @media screen and (max-width: 841px) {
-  /*body {
+  body {
     background: darkcyan;
-  }*/
+  }
 
   .message {
     width: 30%;
@@ -228,45 +234,87 @@ html { background: var(--bg-html); color: var(--color-text-input);}
 }
 
 @media screen and (max-width: 791px) {
- /* body {
+  body {
     background: orange;
-  }*/
+  }
+
+  .TopBar img {
+    margin-right: 200px;
+    width: 270px;
+    height: 80px;
+  }
 
   .message, .cant {
-    font-size: 14px;
+    font-size: 18px;
+  }
+
+  .container {
+    margin: auto 1px;
+    
+  }
+
+  .ball .cant {
+    margin-left: 1px;
   }
 }
 
 @media screen and (max-width: 655px) {
-  /*body {
-    background: hotpink;
-  }*/
+  body {
+    background: rgb(71, 213, 10);
+  }
 
   .container {
-    margin-left: 10%;
-   /* background: saddlebrown;*/
+    margin-left: -100px;
+    /*background: saddlebrown;*/
+  }
+
+  .pokeBall {
+    width: 100px;
+    height: 20px;
+    margin-top: 50px;
+    
   }
 }
 
 @media screen  and (max-width: 736px ){
-  /*body {
-    background: silver;
+  body {
+    background: rgb(91, 3, 3);
+  }
+
+  .principalBar {
+    width: 97.3%;
+  }
+
+  /*.container {
+    margin-right: 20%;
+    background: bisque;
+
   }*/
 
-  .container {
-    margin-left: 10%;
+  /*.message{
+    padding: 12px;
   }
-  
+  */
 }
 
 @media screen  and (max-width: 591px )  {
- /* body {
+  body {
     background: seagreen;
-  }*/
+  }
 
   .TopBar img {
     width: 280px;
     height: 80px;
+  }
+
+  /*.container {
+    background: wheat;
+  }
+*/
+  .ball .pokeBall {
+    width: 50px;
+    height: 50px;
+    margin-top: 11px;
   }
 
   .ball .cant{
@@ -275,22 +323,100 @@ html { background: var(--bg-html); color: var(--color-text-input);}
 }
 
 @media screen  and (max-width: 591px ) {
- /* body {
-    background: red;
-  }*/
+  body {
+    background: rgb(83, 44, 44);
+  }
+
+  .principalBar {
+    width: 97%;
+  }
 
   .TopBar img {
     width: 200px;
     height: 80px;
   }
 
-  .container {
-    margin-left: 50px;
-  }
+  /*.container {
+   
+    background: seashell;
+  }*/
 
   .message {
     font-size: 15px;
     margin-left: 20px;
+  }
+
+  .ball .pokeBall {
+    width: 50px;
+    height: 50px;
+    margin-top: 11px;
+  }
+  .ball .cant {
+    margin-left: 1px;
+  }
+  
+}
+
+@media screen  and (max-width: 488px ) {
+  body {
+    background: slategray;
+  }
+
+  .principalBar {
+    width: 96.4%;
+  }
+  .container {
+  
+    margin-left: -180px;
+  }
+
+  .cant p {
+    background: saddlebrown;
+  }
+}
+
+
+@media screen  and (max-width: 390px ) {
+  body {
+    background: slateblue;
+  }
+
+  .TopBar img {
+    width: 160px;
+    height: 70px;
+  }
+
+  .message {
+    
+    padding: 20px;
+  }
+
+  .cant {
+    visibility: hidden;
+  }
+}
+
+
+@media screen  and (max-width: 295px ) {
+  body {
+    background: seagreen;
+  }
+
+  .principalBar {
+    width: 95%;
+  }
+
+  .container {
+    margin-right: -12px;
+  }
+
+  .TopBar img {
+    width: 140px;
+    height: 80px;
+  }
+
+  .pokeBall {
+    visibility: hidden;
   }
 }
 
