@@ -381,6 +381,10 @@ html { background: var(--bg-html); color: var(--color-text-input);}
     background: slateblue;
   }
 
+  .principalBar {
+    width: 95.3%;
+  }
+
   .TopBar img {
     width: 160px;
     height: 70px;
@@ -391,13 +395,16 @@ html { background: var(--bg-html); color: var(--color-text-input);}
     padding: 20px;
   }
 
+  .pokeBall {
+    margin-left: 10px;
+  }
   .cant {
     visibility: hidden;
   }
 }
 
 
-@media screen  and (max-width: 295px ) {
+@media screen  and (max-width: 299px ) {
   body {
     background: seagreen;
   }
