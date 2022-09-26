@@ -155,7 +155,7 @@ html { background: var(--bg-html); color: var(--color-text-input);}
 /*-------- Top Bar Component --------*/
 
 .principalBar {
-  width: 100%;
+  width: 98.5%;
   height: 17%;
   display: flex;
   justify-content: space-around;
@@ -164,10 +164,6 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   top: 30px;
   background: linear-gradient(115deg, #eeeeee 57.8%, red 57.7%);
 }
-
-/*.TopBar {
-  background: firebrick;
-}*/
 
 .TopBar img {
   width: 320px;
@@ -181,21 +177,7 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   margin-left: 30%;
   width: 40%;
   height: 70%;
- /* background: gold;*/
   color: rgb(0, 0, 0);
-}
-
-.message {
- /* background: salmon;*/
-  text-align: center;
-  width: 40%;
-}
-
-.ball {
- /* background: seashell;*/
-  display: flex;
-  justify-content: space-around;
-  width: 25%;
 }
 
 .container img {
@@ -203,14 +185,113 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   height: 70px;
 }
 
-.container .pokeBall:hover {
-  transform: rotate(95deg);
+.message {
+  text-align: center;
+  width: 40%;
 }
 
-.container .cant {
+.ball {
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+}
+
+.ball .pokeBall:hover { transform: rotate(95deg); }
+
+.ball .cant {
   font-size: 25px;
- /* background: salmon;*/
   margin-left: -16%;
+}
+
+@media screen and (max-width: 960px) {
+  /*body {
+    background: salmon;
+  }*/
+
+  .ball {
+    width: 35%;
+  }
+  
+}
+
+@media screen and (max-width: 841px) {
+  /*body {
+    background: darkcyan;
+  }*/
+
+  .message {
+    width: 30%;
+  }
+  .ball {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 791px) {
+ /* body {
+    background: orange;
+  }*/
+
+  .message, .cant {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  /*body {
+    background: hotpink;
+  }*/
+
+  .container {
+    margin-left: 10%;
+   /* background: saddlebrown;*/
+  }
+}
+
+@media screen  and (max-width: 736px ){
+  /*body {
+    background: silver;
+  }*/
+
+  .container {
+    margin-left: 10%;
+  }
+  
+}
+
+@media screen  and (max-width: 591px )  {
+ /* body {
+    background: seagreen;
+  }*/
+
+  .TopBar img {
+    width: 280px;
+    height: 80px;
+  }
+
+  .ball .cant{
+    width: 20px;
+  }
+}
+
+@media screen  and (max-width: 591px ) {
+ /* body {
+    background: red;
+  }*/
+
+  .TopBar img {
+    width: 200px;
+    height: 80px;
+  }
+
+  .container {
+    margin-left: 50px;
+  }
+
+  .message {
+    font-size: 15px;
+    margin-left: 20px;
+  }
 }
 
 /*-------- Top Bar Component --------*/
