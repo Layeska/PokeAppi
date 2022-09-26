@@ -1,8 +1,9 @@
 import React from 'react'
 import axios from 'axios'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { useEffect, useState } from 'react'
+
 
 import PokemonCard from './PokemonCard'
 import TopBar from './styles/TopBar'
@@ -21,13 +22,6 @@ const PokemonList = () => {
     const {ChangeUrl} = useApi('https://pokeapi.co/api/v2/pokemon/', res => setPokemonList(res.data.results))
     const {ChangeUrl: changeData} = useApi('https://pokeapi.co/api/v2/type/', res => setPokemonType(res.data.results))
 
-
-    /*useEffect(() => {
-        
-        axios.get('https://pokeapi.co/api/v2/pokemon/').then(res => setPokemonList(res.data.results))
-        axios.get('https://pokeapi.co/api/v2/type/').then(res => setPokemonType(res.data.results))
-    }, [])*/
-
     //console.log(pokemonType)
 
     const searchName = () => navigate(`/pokemon/${nameInput}`)
@@ -40,10 +34,8 @@ const PokemonList = () => {
         <div>
             {ChangeUrl}
             {changeData}
-
-            <h1>Pokemon</h1>
             <TopBar/>
-            <h3>Welcome User {name}</h3>
+            
             <button onClick={() => setPages(pages - 1)} disabled={pages === 1}><i className="fa-sharp fa-solid fa-caret-left"></i></button>
             {
                 pagesNumber.map((number) => (
@@ -73,7 +65,7 @@ const PokemonList = () => {
             <div className='pokemon-container'>
                 {
                     pokemonPaginated.map(poke => (
-                        <PokemonCard url={poke.url ? poke.url : poke.pokemon.url} key={poke.id ? poke.id : poke.pokemon?.id}/>
+                        <PokemonCard url={poke.url ? poke.url : poke.pokemon.url} key={poke.url ? poke.url : poke.pokemon.url}/>
                     ))
                 }
             </div>

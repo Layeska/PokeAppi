@@ -152,17 +152,21 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   background: rebeccapurple;
 }
 
+/************************************************************************************************************/
+
 /*-------- Top Bar Component --------*/
 
 .principalBar {
-  width: 98.5%;
+ /* width: 98.5%;*/
+  width: 100%;
   height: 17%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
+ 
   top: 30px;
   background: linear-gradient(115deg, #eeeeee 57.8%, red 57.7%);
+  margin-bottom: 20px;
 }
 
 .TopBar img {
@@ -262,19 +266,14 @@ html { background: var(--bg-html); color: var(--color-text-input);}
 }
 
 @media screen and (max-width: 655px) {
-  body {
-    background: rgb(71, 213, 10);
-  }
+  body { background: rgb(71, 213, 10); }
 
-  .container {
-    margin-left: -100px;
-  }
+  .container { margin-left: -100px; }
 
   .pokeBall {
     width: 100px;
     height: 20px;
     margin-top: 50px;
-    
   }
 }
 
@@ -282,23 +281,15 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   body {
     background: rgb(91, 3, 3);
   }
-
-  .principalBar {
-    width: 97.3%;
-  }
-
 }
 
 @media screen  and (max-width: 591px )  {
-  body {
-    background: seagreen;
-  }
+  body { background: seagreen; }
 
   .TopBar img {
     width: 280px;
     height: 80px;
   }
-
 
   .ball .pokeBall {
     width: 50px;
@@ -306,19 +297,11 @@ html { background: var(--bg-html); color: var(--color-text-input);}
     margin-top: 11px;
   }
 
-  .ball .cant{
-    width: 20px;
-  }
+  .ball .cant{ width: 20px; }
 }
 
 @media screen  and (max-width: 591px ) {
-  body {
-    background: rgb(83, 44, 44);
-  }
-
-  .principalBar {
-    width: 97%;
-  }
+  body { background: rgb(83, 44, 44); }
 
   .TopBar img {
     width: 200px;
@@ -335,80 +318,45 @@ html { background: var(--bg-html); color: var(--color-text-input);}
     height: 50px;
     margin-top: 11px;
   }
-  .ball .cant {
-    margin-left: 1px;
-  }
+  .ball .cant { margin-left: 1px; }
   
 }
 
 @media screen  and (max-width: 488px ) {
-  body {
-    background: slategray;
-  }
+  body { background: slategray; }
 
-  .principalBar {
-    width: 96.4%;
-  }
-  .container {
-  
-    margin-left: -180px;
-  }
+  .container { margin-left: -180px; }
 
-  .cant p {
-    background: saddlebrown;
-  }
+  .cant p { background: saddlebrown; }
 }
 
 
 @media screen  and (max-width: 390px ) {
-  body {
-    background: slateblue;
-  }
-
-  .principalBar {
-    width: 95.3%;
-  }
+  body { background: slateblue; }
 
   .TopBar img {
     width: 160px;
     height: 70px;
   }
 
-  .message {
-    
-    padding: 20px;
-  }
+  .message { padding: 20px; }
 
-  .pokeBall {
-    margin-left: 10px;
-  }
-  .cant {
-    visibility: hidden;
-  }
+  .pokeBall { margin-left: 10px; }
+  .cant { visibility: hidden; }
 }
 
 
 @media screen  and (max-width: 299px ) {
-  body {
-    background: seagreen;
-  }
+  body { background: seagreen; }
 
-  .principalBar {
-    width: 95%;
-  }
-
-  .container {
-    margin-right: -12px;
-  }
+  .container { margin-right: -12px; }
 
   .TopBar img {
     width: 140px;
     height: 80px;
   }
 
-  .pokeBall {
-    visibility: hidden;
-  }
+  .pokeBall { visibility: hidden; }
 }
 
 /*-------- Top Bar Component --------*/
