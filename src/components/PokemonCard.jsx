@@ -15,10 +15,11 @@ const PokemonCard = ({url}) => {
     console.log(pokemon)
 
     return (
-        <div className='col'>
-            <div className='pokemon-card' onClick={() => navigate(`/pokemon/${pokemon.id}`)}>
+        <div className='pokemonCard'>
+            <div className='pokemonCardItem' onClick={() => navigate(`/pokemon/${pokemon.id}`)}>
                 <h1>{pokemon.name}</h1>
-                <img src={pokemon.sprites?.other.dream_world.front_default} alt="" />
+                <img src={pokemon.sprites?.other.dream_world.front_default} alt="" />*
+                <br />
             </div>
         </div>
         
@@ -26,3 +27,10 @@ const PokemonCard = ({url}) => {
 }
 
 export default PokemonCard
+
+
+/*
+<img src={pokemon.sprites?.front_default} alt="" />
+                <img src={pokemon.sprites?.back_default} alt="" />
+
+*/

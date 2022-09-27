@@ -116,41 +116,193 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   .cardInfo input:focus + .btn { font-size: 26px; margin-top: 5px;}
 }
 
+/******************************************************************************************/
+
 /*-------- PokemonList Component --------*/
 
-.pokemon-container {
+/*TODO: PAGINATION*/
+
+.pagination {
+  width: 100%;
+ /* background: saddlebrown;*/
+}
+
+.paginationItem {
+ /* background: rgb(68, 44, 27);*/
+  width: fit-content;
+  margin: auto;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10%;
 }
 
-.pokemon-container .col {
-  width: 25%;
-  padding: 10px;
+.before, .next {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
 }
 
-.pokemon-container .col .pokemon-card {
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 8px rgb(99, 59, 9);
+.before:hover, .next:hover {
+  /*background: rgba(255, 0, 0, 0.5);*/
+  transform: scale(1.2);
+  border-radius: 80%;
 }
 
-.pokemon-container .col .pokemon-card img {
-  width: 90%;
-}
-
-.details strong {
-  font-size: 15px;
-  background: salmon;
+.btnIndex {
+  background: rgba(255, 0, 0, 0.3);
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  color: white;
+  font-size: 20px;
+  padding: 8px 8px;
 }
 
 /*-------- Pokemon List --------*/
-.btnIndex:focus {
-  background: rgb(37, 69, 51);
+.btnIndex:focus { background: rgb(255, 0, 0); }
+
+.btnIndex:hover { background: transparent; /*rgba(255, 0, 0, 0.5); */}
+
+/*.btnIndex::before { background: rebeccapurple; }*/
+
+/* TODO: Search Pokemon */
+
+.searchPokemon {
+  width: 98%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
 }
 
-.btnIndex::before {
-  background: rebeccapurple;
+.labelSearch {
+  background: transparent;
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 3px;
+  overflow: hidden;
 }
+
+.label {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.2);
+  transform-origin: 0 0;
+  transform: translate3d(0,0,0);
+  transition: all .2s ease;
+  pointer-events: none;
+}
+
+.focus-gb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background: rgba(0,0,0,.05);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+#name {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 0;
+  padding: 16px 12px 0 12px;
+  height: 16px;
+  font-size: 16px;
+  font-weight: 400;
+  background: rgba(0,0,0,.02);
+  box-shadow: inset 0 -1px 0 rgb(255, 254, 254, 0.3);
+  color: rgb(255, 255, 255);
+  transition: all .15s ease;
+}
+
+#name:focus {
+  background: rgba(0,0,0,.04);
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.5);
+  height: 56px;
+}
+
+#name:not(:placeholder-shown) + .label {
+  transform: translate3d(0,-12px,0) scale(.75);
+}
+
+#name:focus {
+  background: rgba(0,0,0,.05);
+  outline: none;
+  box-shadow: inset 0 -2px 0 #FFCE31;
+}
+
+#name:focus + .label {
+  color: #FFCE31;
+  transform: translate3d(0,-12px,0) scale(.75);
+}
+
+#name:focus + .focus-bg {
+  transform: scaleX(1);
+  transition: all .1s ease;
+}
+
+/*TODO: Select and Options */
+
+select {
+ background: transparent;
+  color: rgb(255, 254, 254, 0.3);
+  border: none;
+  width: 140px;
+  margin-top: 10%;
+  outline: none;
+  
+}
+
+option {
+  background: black;
+  border: none;
+  color: rgb(255, 254, 254, 0.3);
+  outline: none;
+  overflow-y: auto;
+  appearance: none;
+  overflow:auto;
+  box-sizing: border-box;
+  color: rgb(186, 149, 26, 0.5);
+}
+
+select::-webkit-scrollbar {
+  display: none;
+}
+
+option:hover {
+  background: salmon;
+}
+
+
+
+
+/*
+option::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+select::-webkit-scrollbar:vertical {
+  width: 2px;
+}
+
+option::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+option::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+*/
 
 /************************************************************************************************************/
 
@@ -163,10 +315,10 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   display: flex;
   justify-content: space-around;
   align-items: center;
- 
   top: 30px;
   background: linear-gradient(115deg, #eeeeee 57.8%, red 57.7%);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  
 }
 
 .TopBar img {
