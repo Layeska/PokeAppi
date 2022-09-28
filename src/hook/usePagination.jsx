@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 const usePagination = (pokemonList) => {
     const [pages, setPages] = useState(1)
-    const pokemonPerPage = 5
+    const pokemonPerPage = 4
 
     const lastPokemonIndex = pages * pokemonPerPage
     const firstPokemonIndex = lastPokemonIndex - pokemonPerPage

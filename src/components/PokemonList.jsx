@@ -42,6 +42,18 @@ const PokemonList = () => {
             {changeData}
             <TopBar/>
 
+            <div className='pagination'>
+                <div className='paginationItem'>
+                    <button className='before' onClick={() => setPages(pages - 1)} disabled={pages === 1}><i className="fa-sharp fa-solid fa-caret-left"></i></button>
+                    { pagesNumber.map((number) => (
+                        <button key={number} className='btnIndex' onClick={() => setPages(number)}>{number}</button> ))
+                        
+                    }
+                    <button className='next' onClick={() => setPages(pages + 1)} disabled={pages === totalPages}><i className="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+            <br />
+            
             <div className='searchPokemon'>
                 <label className='labelSearch' htmlFor="">
                     <input onKeyDown={handleKeyDown}  id={'name'} type="text" value={nameInput} onChange={e => setNameInput(e.target.value)}/>
@@ -70,17 +82,7 @@ const PokemonList = () => {
                 )) }
             </div>
 
-            <div className='pagination'>
-                <div className='paginationItem'>
-                    <button className='before' onClick={() => setPages(pages - 1)} disabled={pages === 1}><i className="fa-sharp fa-solid fa-caret-left"></i></button>
-                    { pagesNumber.map((number) => (
-                        <button key={number} className='btnIndex' onClick={() => setPages(number)}>{number}</button> ))
-                        
-                    }
-                    <button className='next' onClick={() => setPages(pages + 1)} disabled={pages === totalPages}><i className="fa-solid fa-caret-right"></i></button>
-                </div>
-            </div>
-            <br />
+            
         </>
     )
 }

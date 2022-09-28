@@ -5,6 +5,8 @@
   text-align: center;
 }
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   --pngCursor: url('https://img.icons8.com/fluency/48/000000/heart-plus.png');
   --bg-imgInput: url('./assets/bg-poke-input.jpg');
@@ -159,7 +161,7 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   padding: 8px 8px;
 }
 
-/*-------- Pokemon List --------*/
+/*++++++++ Pagination ++++++++*/
 .btnIndex:focus { background: rgb(255, 0, 0); }
 
 .btnIndex:hover { background: transparent; /*rgba(255, 0, 0, 0.5); */}
@@ -249,6 +251,7 @@ html { background: var(--bg-html); color: var(--color-text-input);}
   transition: all .1s ease;
 }
 
+/*********************************************************************/
 /*TODO: Select and Options */
 
 select {
@@ -258,7 +261,6 @@ select {
   width: 140px;
   margin-top: 10%;
   outline: none;
-  
 }
 
 option {
@@ -277,34 +279,229 @@ select::-webkit-scrollbar {
   display: none;
 }
 
-option:hover {
-  background: salmon;
-}
-
-
-
-
-/*
-option::-webkit-scrollbar {
-  -webkit-appearance: none;
-}
-
-select::-webkit-scrollbar:vertical {
-  width: 2px;
-}
-
-option::-webkit-scrollbar-thumb {
-  background-color: #797979;
-  border-radius: 20px;
-  border: 2px solid #f1f2f3;
-}
-
-option::-webkit-scrollbar-track {
-  border-radius: 10px;  
-}
-*/
-
 /************************************************************************************************************/
+/*++++++++ Donde va la llamada a la card pokemon, abajo del componente ++++++++*/
+
+/*-------- Pokemon Card Component --------*/
+.pokemonContainer {
+ /* background: slateblue;*/
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 95%;
+  gap: 2%;
+  margin-top: 20px;
+  color: black;
+}
+
+.pokemonCard {
+  background: sandybrown;
+  position: relative;
+  color: black;
+  
+}
+
+.containerPokemon .pokemonCard {
+  position: relative;
+  width: 260px;
+  height: 400px;
+ /* background: rgba(69, 33, 33);*/
+  /*background-image: radial-gradient(circle at 51.12% 53.08%, #d8f3dc 0, #b7e4c7 12.5%, #95d5b2 25%, #74c69d 37.5%, #52b788 50%, #40916c 62.5%, #2d6a4f 75%, #1b4332 87.5%, #081c15 100%);*/
+  /*background-image: radial-gradient(circle at 51.12% 53.08%, #f8f9fa 0, #e9ecef 12.5%, #dee2e6 25%, #ced4da 37.5%, #adb5bd 50%, #495057 62.5%, #6c757d 75%, #343a40 87.5%, #212529 100%);*/
+  /*background-image: radial-gradient(circle at 51.12% 53.08%, #e0aaff 0, #c77dff 12.5%, #9d4edd 25%, #7b2cbf 37.5%, #7b2cbf 50%, #5a189a 62.5%, #3c096c 75%, #240046 87.5%, #10002b 100%);*/
+  background-image: radial-gradient(circle at 51.12% 53.08%, #caf0f8 0, #ade8f4 12.5%, #90e0ef 25%, #48cae4 37.5%, #00b4d8 50%, #0096c7 62.5%, #0077b6 75%, #023e8a 87.5%, #03045e 100%);
+  /*background-image: radial-gradient(circle at 51.12% 53.08%, #caf0f8 0, #ade8f4 12.5%, #90e0ef 25%, #48cae4 37.5%, #00b4d8 50%, #0096c7 62.5%, #0077b6 75%, #023e8a 87.5%, #03071e 100%);*/
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.containerPokemon .pokemonCard .before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #9bdc28;
+  clip-path: circle(120px at 80% 20%);
+  transition: 1s ease-in-out;
+}
+
+.containerPokemon .pokemonCard:hover .before{
+  clip-path: circle(250px at 80% -20%);
+  opacity: 0.8;
+}
+
+
+/*! The Ribbon */
+
+.ribbon {
+  width:351px;
+  height:170px;
+  box-sizing: border-box;
+  margin: calc(50vh - 170px) auto;
+  position: relative;
+  /*background: rgba(139, 69, 19, 0.5);*/
+}
+
+.ribbon .before2 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;         
+  height: 0;
+  width: 160px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 23px;
+  text-align: center;
+  box-sizing: border-box;
+  margin: -45% 0% 0% -15%;
+  transform: rotate(-45deg);
+  color: rgb(255, 255, 255); 
+  border: 25px solid transparent;
+  border-bottom: 25px solid purple;
+}
+
+
+
+.containerPokemon .pokemonCard .imgBox{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10000;
+  width: 100%;
+  height: 220px;
+  transition: 1s;
+  
+}
+
+.containerPokemon .pokemonCard:hover .imgBox{
+  top: 0%;
+  transform: translateY(0%);
+  margin-top: 10px;
+}
+
+.containerPokemon .pokemonCard .imgBox img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.imgBox img {
+  width: 200px;
+  height: 180px;
+}
+
+.containerPokemon .pokemonCard .infoBox{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 2s;
+  z-index: 10;
+}
+
+.containerPokemon .pokemonCard:hover .infoBox{
+  height: 150px;
+  background: rgba(78, 78, 68, 0.5);
+}
+
+/*! Name of pokemon */
+.containerPokemon .pokemonCard .infoBox h2 {
+  margin: 0;
+  position: relative;
+  font-weight: 600;
+  color: rgb(20, 2, 2);
+  text-transform: capitalize;
+}
+
+.containerPokemon .pokemonCard .infoBox .size, .containerPokemon .pokemonCard .infoBox .color {
+  padding: 8px 20px;
+  transition: 1s; 
+  opacity: 0;
+  visibility: hidden;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.containerPokemon .pokemonCard:hover .infoBox .size{
+  opacity: 1;
+  visibility: visible;
+}
+
+.containerPokemon .pokemonCard:hover .infoBox .color{
+  opacity: 1;
+  visibility: visible;
+}
+
+.containerPokemon .pokemonCard .infoBox .size h3, .containerPokemon .pokemonCard .infoBox .color h3{
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: -1px;
+}
+
+.size {
+/*  background: darkcyan;*/
+  text-align: center;
+
+}
+
+.size h3 {
+  font-weight: 700;
+}
+
+.size-col {
+ /* background: salmon;*/
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+  
+}
+
+.size-col strong {
+ /* background: saddlebrown;*/
+  margin-right: 5px;
+}
+
+
+.containerPokemon .pokemonCard .infoBox .size span{
+  background: seashell;
+  width: 34%;
+  height: 20px;
+  display: flex;
+  padding: 2px;
+  text-align: center;
+  line-height: 26px;
+  font-size: 14px;
+  margin: 2px -3px;
+  transition: 1s; /*0.5s*/
+  color: #111;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+.containerPokemon .pokemonCard .infoBox .size span:hover{
+  background: #9bdc28;
+}
+
+.color span {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+
+
+
+
 
 /*-------- Top Bar Component --------*/
 
