@@ -33,7 +33,7 @@ const Pagination = ({page, setPage, max}) => {
         <div className='pagination1'>
             <button disabled={page == 1 || page < 1} className='btn' onClick={previousPage}><i className="fa-sharp fa-solid fa-caret-left"></i></button>
             <input value={input} autoComplete='off' onChange={(e) => onChange(e)} onKeyDown={(e) => onKeyDown(e)}/>
-            <p className=''>de {Math.ceil(max)} Pag</p>
+            <p className='pag'>de {Math.ceil(max)} Pag</p>
             <button disabled={page == Math.ceil(max) || page > Math.ceil(max)} className='btn' onClick={nextPage}><i className="fa-solid fa-caret-right"></i></button>
         </div>
     )

@@ -1,12 +1,5 @@
-/*#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-*/
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
   --pngCursor: url('https://img.icons8.com/fluency/48/000000/heart-plus.png');
   --bg-imgInput: url('./assets/bg-poke-input.jpg');
@@ -14,6 +7,9 @@
   --bg-html: rgb(0,0,0);
   --color-text-input: rgb(207, 207, 207);
   --color-focus-input: rgb(120, 120, 120);
+  --color-text-select: #FFCE31;
+  --color-white:  rgb(255, 255, 255);
+  --shadowCard: rgb(255, 254, 254, 0.3);
 }
 
 html { background: var(--bg-html); color: var(--color-text-input); }
@@ -127,92 +123,37 @@ html { background: var(--bg-html); color: var(--color-text-input); }
   justify-content: center;
   align-items: center;
   gap: 10px;
-  
 }
 
-.btn:hover {
-  background: salmon;
-}
-
-.btn[disabled] {
-  background: seagreen;
-}
+.btn[disabled] { color: var(--shadowCard); }
 
 .btn {
-  /*background-color: #242424;*/
   background: transparent;
+  color: var(--color-text-input);
   border: none;
   border-radius: 3px;
   padding: 5px 10px;
-  font-size: 30px;
+  font-size: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  width: 35px;
 }
 
 .pagination1 input {
-  width: 25%;
+  width: 8%;
   height: 30px;
   padding: 5px 25px;
-  border-radius: 3px;
-  border-color: 10px solid #242424;
+  border: none;
   text-align: center;
+  background: var(--bg-html);
+  color: var(--color-text-input);
 }
 
-/*TODO: PAGINATION*/
+.pag{ color: var(--color-text-input); }
 
-.pagination {
-  width: 90%;
-  /*background: saddlebrown;*/
-  margin: auto;
-  display: flex;
-}
-
-.paginationItem {
-  /*background: rgb(152, 16, 120);*/
-  width: 75%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  
-  /*display: flex;
-  justify-content: space-between;*/
-  /*gap: 10%;*/
-  
-}
-
-.before, .next {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 20px;
-}
-
-.before:hover, .next:hover {
-  /*background: rgba(255, 0, 0, 0.5);*/
-  transform: scale(1.2);
-  border-radius: 80%;
-}
-
-.btnIndex {
-  background: rgba(255, 0, 0, 0.3);
-  border: none;
-  border-radius: 50%;
-  font-size: 20px;
-  color: white;
-  font-size: 20px;
-  padding: 8px 8px;
-}
-
-/*++++++++ Pagination ++++++++*/
-.btnIndex:focus { background: rgb(255, 0, 0); }
-
-.btnIndex:hover { background: transparent; /*rgba(255, 0, 0, 0.5); */}
-
-/*.btnIndex::before { background: rebeccapurple; }*/
-
-/* TODO: Search Pokemon */
+/*++++++++ Search Pokemon ++++++++*/
 
 .searchPokemon {
   width: 98%;
@@ -232,10 +173,10 @@ html { background: var(--bg-html); color: var(--color-text-input); }
 
 .label {
   position: absolute;
-  top: 20px;
+  top: 10px;
   left: 12px;
   font-size: 20px;
-  color: rgba(255, 255, 255, 0.2);
+  color: var(--shadowCard);
   transform-origin: 0 0;
   transform: translate3d(0,0,0);
   transition: all .2s ease;
@@ -248,7 +189,8 @@ html { background: var(--bg-html); color: var(--color-text-input); }
   left: 0;
   width: 100%;
   height: 10%;
-  background: rgba(0,0,0,.05);
+  background: var(--bg-html);
+  opacity: 0.5;
   z-index: -1;
   transform: scaleX(0);
   transform-origin: left;
@@ -264,14 +206,15 @@ html { background: var(--bg-html); color: var(--color-text-input); }
   font-size: 16px;
   font-weight: 400;
   background: rgba(0,0,0,.02);
-  box-shadow: inset 0 -1px 0 rgb(255, 254, 254, 0.3);
-  color: rgb(255, 255, 255);
+  box-shadow: inset 0 -1px 0 var(--shadowCard);
+  color: var(--color-white);
   transition: all .15s ease;
 }
 
 #name:focus {
   background: rgba(0,0,0,.04);
-  box-shadow: inset 0 -1px 0 rgba(0,0,0,.5);
+  box-shadow: inset 0 -1px 0 var(--bg-html);
+  opacity: 0.5;
   height: 56px;
 }
 
@@ -280,13 +223,14 @@ html { background: var(--bg-html); color: var(--color-text-input); }
 }
 
 #name:focus {
-  background: rgba(0,0,0,.05);
+  background: var(--bg-html);
+  opacity: 0.5;
   outline: none;
-  box-shadow: inset 0 -2px 0 #FFCE31;
+  box-shadow: inset 0 -2px 0 var(color-text-select);
 }
 
 #name:focus + .label {
-  color: #FFCE31;
+  color: var(color-text-select);
   transform: translate3d(0,-12px,0) scale(.75);
 }
 
@@ -300,17 +244,17 @@ html { background: var(--bg-html); color: var(--color-text-input); }
 
 select {
  background: transparent;
-  color: rgb(255, 254, 254, 0.3);
+  color: var(--shadowCard);
   border: none;
   width: 140px;
-  margin-top: 10%;
+  margin-top: 3%;
   outline: none;
 }
 
 option {
-  background: black;
+  background: var(--bg-html);
   border: none;
-  color: rgb(255, 254, 254, 0.3);
+  color: var(--shadowCard);
   outline: none;
   overflow-y: auto;
   appearance: none;
@@ -319,34 +263,30 @@ option {
   color: rgb(186, 149, 26, 0.5);
 }
 
-select::-webkit-scrollbar {
-  display: none;
-}
+select::-webkit-scrollbar { display: none; }
 
 /************************************************************************************************************/
 /*++++++++ Donde va la llamada a la card pokemon, abajo del componente ++++++++*/
 
 /*-------- Pokemon Card Component --------*/
 .pokemonContainer {
- /* background: slateblue;*/
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin: auto;
   width: 95%;
   gap: 3%;
-  margin-top: 20px;
-  color: black;
-  
+  margin-top: 0px;
+  color: var(--bg-html)
 }
 
 .pokemonCard {
-  /*background: sandybrown;*/
+  opacity: 0.5;
   position: relative;
-  color: black;
   margin-top: 15%;
-  
 }
+
+.pokemonCard:hover { opacity: 0.8; }
 
 
 .containerPokemon .pokemonCard {
@@ -390,7 +330,6 @@ select::-webkit-scrollbar {
   box-sizing: border-box;
   margin: calc(50vh - 170px) auto;
   position: relative;
-  /*background: rgba(139, 69, 19, 0.5);*/
 }
 
 .ribbon .before2 {
@@ -407,12 +346,10 @@ select::-webkit-scrollbar {
   box-sizing: border-box;
   margin: -45% 0% 0% -15%;
   transform: rotate(-45deg);
-  color: rgb(255, 255, 255); 
+  color: var(--color-white);
   border: 25px solid transparent;
   border-bottom: 25px solid rgba(163, 35, 111, 0.5);
 }
-
-
 
 .containerPokemon .pokemonCard .imgBox{
   position: absolute;
@@ -422,7 +359,6 @@ select::-webkit-scrollbar {
   width: 100%;
   height: 220px;
   transition: 1s;
-  
 }
 
 .containerPokemon .pokemonCard:hover .imgBox{
@@ -463,9 +399,10 @@ select::-webkit-scrollbar {
   margin: 10px;
   position: relative;
   font-weight: 600;
-  color: rgb(20, 2, 2);
+  color: var(--color-white);
   text-transform: capitalize;
 }
+
 
 .containerPokemon .pokemonCard .infoBox .size, .containerPokemon .pokemonCard .infoBox .color {
   padding: 8px 20px;
@@ -487,7 +424,7 @@ select::-webkit-scrollbar {
 }
 
 .containerPokemon .pokemonCard .infoBox .size h3, .containerPokemon .pokemonCard .infoBox .color h3{
-  color: rgb(0, 0, 0);
+  color: var(--bg-html);
   font-weight: 300;
   font-size: 14px;
   text-transform: uppercase;
@@ -496,29 +433,17 @@ select::-webkit-scrollbar {
   margin-bottom: -1px;
 }
 
-.size {
-/*  background: darkcyan;*/
-  text-align: center;
+.size { text-align: center; }
 
-}
-
-.size h3 {
-  font-weight: 700;
-}
+.size h3 { font-weight: 700; }
 
 .size-col {
- /* background: salmon;*/
   display: flex;
   justify-content: center;
   gap: 15%;
-  
 }
 
-.size-col strong {
- /* background: saddlebrown;*/
-  margin-right: 5px;
-}
-
+.size-col strong { margin-right: 5px; }
 
 .containerPokemon .pokemonCard .infoBox .size span{
   background: rgba(218, 211, 205, 0.4);
@@ -536,11 +461,7 @@ select::-webkit-scrollbar {
   cursor: pointer;
 }
 
-
-
-.containerPokemon .pokemonCard .infoBox .size span:hover{
-  background: rgba(155, 220, 40, 0.3);
-}
+.containerPokemon .pokemonCard .infoBox .size span:hover{ background: rgba(155, 220, 40, 0.3); }
 
 .color span {
   font-family: 'Courier New', Courier, monospace;
@@ -551,12 +472,9 @@ select::-webkit-scrollbar {
 .color { margin-top: 2%; }
 
 
-
-
 /*-------- Top Bar Component --------*/
 
 .principalBar {
- /* width: 98.5%;*/
   width: 100%;
   height: 17%;
   display: flex;
@@ -566,7 +484,6 @@ select::-webkit-scrollbar {
   /*background: linear-gradient(115deg, #eeeeee 57.8%, red 57.7%);*/
   background: linear-gradient(115deg, #090808 57.8%, rgb(121, 42, 42) 57.7%);
   margin-bottom: 25px;
-  
 }
 
 .TopBar img {
@@ -581,7 +498,7 @@ select::-webkit-scrollbar {
   margin-left: 30%;
   width: 40%;
   height: 70%;
-  color: rgb(0, 0, 0);
+  color: var(--bg-html);
 }
 
 .container img {
@@ -611,9 +528,9 @@ select::-webkit-scrollbar {
 /*TODO: Media Queries */
 
 @media screen and (max-width: 960px) {
-  body {
+  /*body {
     background: salmon;
-  }
+  }*/
 
   .ball .pokeBall {
     width: 65px;
@@ -621,29 +538,20 @@ select::-webkit-scrollbar {
     margin-top: 4px;
   }
 
-  .ball {
-    width: 35%;
-  }
-  
+  .ball { width: 35%; }
 }
 
 @media screen and (max-width: 841px) {
-  body {
-    background: darkcyan;
-  }
+ /* body { background: darkcyan; }*/
 
-  .message {
-    width: 30%;
-  }
-  .ball {
-    width: 45%;
-  }
+  .message { width: 30%; }
+  .ball { width: 45%; }
 }
 
 @media screen and (max-width: 791px) {
-  body {
+ /* body {
     background: orange;
-  }
+  }*/
 
   .TopBar img {
     margin-right: 200px;
@@ -651,22 +559,15 @@ select::-webkit-scrollbar {
     height: 80px;
   }
 
-  .message, .cant {
-    font-size: 18px;
-  }
+  .message, .cant { font-size: 18px; }
 
-  .container {
-    margin: auto 1px;
-    
-  }
+  .container { margin: auto 1px; }
 
-  .ball .cant {
-    margin-left: 1px;
-  }
+  .ball .cant { margin-left: 1px; }
 }
 
 @media screen and (max-width: 655px) {
-  body { background: rgb(71, 213, 10); }
+  /*body { background: rgb(71, 213, 10); }*/
 
   .container { margin-left: -100px; }
 
@@ -676,15 +577,15 @@ select::-webkit-scrollbar {
     margin-top: 50px;
   }
 }
-
+/*
 @media screen  and (max-width: 736px ){
   body {
     background: rgb(91, 3, 3);
   }
-}
+}*/
 
 @media screen  and (max-width: 591px )  {
-  body { background: seagreen; }
+  /*body { background: seagreen; }*/
 
   .TopBar img {
     width: 280px;
@@ -701,7 +602,7 @@ select::-webkit-scrollbar {
 }
 
 @media screen  and (max-width: 591px ) {
-  body { background: rgb(83, 44, 44); }
+  /*body { background: rgb(83, 44, 44); }*/
 
   .TopBar img {
     width: 200px;
@@ -719,20 +620,19 @@ select::-webkit-scrollbar {
     margin-top: 11px;
   }
   .ball .cant { margin-left: 1px; }
-  
 }
 
 @media screen  and (max-width: 488px ) {
-  body { background: slategray; }
+  /*body { background: slategray; }*/
 
   .container { margin-left: -180px; }
 
-  .cant p { background: saddlebrown; }
+ /* .cant p { background: saddlebrown; }*/
 }
 
 
 @media screen  and (max-width: 390px ) {
-  body { background: slateblue; }
+  /*body { background: slateblue; }*/
 
   .TopBar img {
     width: 160px;
@@ -747,7 +647,7 @@ select::-webkit-scrollbar {
 
 
 @media screen  and (max-width: 299px ) {
-  body { background: seagreen; }
+  /*body { background: seagreen; }*/
 
   .container { margin-right: -12px; }
 
@@ -760,4 +660,7 @@ select::-webkit-scrollbar {
 }
 
 /*-------- Top Bar Component --------*/
+
+
+
 

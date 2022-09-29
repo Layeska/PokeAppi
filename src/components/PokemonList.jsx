@@ -50,13 +50,6 @@ const PokemonList = () => {
             {ChangeUrl}
             {changeData}
             <TopBar/>
-
-            <div className='pagination'>
-                <div className='paginationItem'>
-                    <Pagination page={page} setPage={setPage} max={max}/>
-                </div>
-            </div>
-            <br />
             
             <div className='searchPokemon'>
                 <label className='labelSearch' htmlFor="">
@@ -85,6 +78,14 @@ const PokemonList = () => {
                     <PokemonCard url={poke.url ? poke.url : poke.pokemon.url} key={poke.url ? poke.url : poke.pokemon.url}/>
                 )) }
             </div>
+            <br />
+
+            <div className='pagination'>
+                <div className='paginationItem'>
+                    <Pagination page={page} setPage={setPage} max={max}/>
+                </div>
+            </div>
+            <br />
         </>
     )
 }

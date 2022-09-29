@@ -5,7 +5,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 const ProtectedRoute = () => {
     const name = useSelector(state => state.userName)
 
-    if(true)  //name
+    if(name)  //name
         return <Outlet/>
     else return <Navigate to={'/'}/>
 }
