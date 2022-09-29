@@ -16,7 +16,7 @@
   --color-focus-input: rgb(120, 120, 120);
 }
 
-html { background: var(--bg-html); color: var(--color-text-input);}
+html { background: var(--bg-html); color: var(--color-text-input); }
 
 /*-------- Component of UserInput ----------*/
 
@@ -121,21 +121,68 @@ html { background: var(--bg-html); color: var(--color-text-input);}
 /******************************************************************************************/
 
 /*-------- PokemonList Component --------*/
+/*TODO: NEW PAGINATION */
+.pagination1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.btn:hover {
+  background: salmon;
+}
+
+.btn[disabled] {
+  background: seagreen;
+}
+
+.btn {
+  /*background-color: #242424;*/
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pagination1 input {
+  width: 25px;
+  height: 30px;
+  padding: 5px 25px;
+  border-radius: 3px;
+  border-color: 10px solid #242424;
+  text-align: center;
+  font-weight: 600;
+}
+
+
 
 /*TODO: PAGINATION*/
 
 .pagination {
-  width: 100%;
- /* background: saddlebrown;*/
+  width: 90%;
+  /*background: saddlebrown;*/
+  margin: auto;
+  display: flex;
 }
 
 .paginationItem {
- /* background: rgb(68, 44, 27);*/
-  width: fit-content;
+  /*background: rgb(152, 16, 120);*/
+  width: 75%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
-  gap: 10%;
+  justify-content: space-around;
+  
+  /*display: flex;
+  justify-content: space-between;*/
+  /*gap: 10%;*/
+  
 }
 
 .before, .next {
@@ -287,29 +334,34 @@ select::-webkit-scrollbar {
  /* background: slateblue;*/
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: auto;
   width: 95%;
-  gap: 2%;
+  gap: 3%;
   margin-top: 20px;
-  color: black;
-}
-
-.pokemonCard {
-  background: sandybrown;
-  position: relative;
   color: black;
   
 }
+
+.pokemonCard {
+  /*background: sandybrown;*/
+  position: relative;
+  color: black;
+  margin-top: 15%;
+  
+}
+
 
 .containerPokemon .pokemonCard {
   position: relative;
   width: 260px;
   height: 400px;
- /* background: rgba(69, 33, 33);*/
+  background: rgba(69, 33, 33, 0.5);
+  backdrop-filter: blur(5px);
   /*background-image: radial-gradient(circle at 51.12% 53.08%, #d8f3dc 0, #b7e4c7 12.5%, #95d5b2 25%, #74c69d 37.5%, #52b788 50%, #40916c 62.5%, #2d6a4f 75%, #1b4332 87.5%, #081c15 100%);*/
   /*background-image: radial-gradient(circle at 51.12% 53.08%, #f8f9fa 0, #e9ecef 12.5%, #dee2e6 25%, #ced4da 37.5%, #adb5bd 50%, #495057 62.5%, #6c757d 75%, #343a40 87.5%, #212529 100%);*/
   /*background-image: radial-gradient(circle at 51.12% 53.08%, #e0aaff 0, #c77dff 12.5%, #9d4edd 25%, #7b2cbf 37.5%, #7b2cbf 50%, #5a189a 62.5%, #3c096c 75%, #240046 87.5%, #10002b 100%);*/
-  background-image: radial-gradient(circle at 51.12% 53.08%, #caf0f8 0, #ade8f4 12.5%, #90e0ef 25%, #48cae4 37.5%, #00b4d8 50%, #0096c7 62.5%, #0077b6 75%, #023e8a 87.5%, #03045e 100%);
+  /*background-image: radial-gradient(circle at 51.12% 53.08%, #caf0f8 0, #ade8f4 12.5%, #90e0ef 25%, #48cae4 37.5%, #00b4d8 50%, #0096c7 62.5%, #0077b6 75%, #023e8a 87.5%, #03045e 100%);*/
   /*background-image: radial-gradient(circle at 51.12% 53.08%, #caf0f8 0, #ade8f4 12.5%, #90e0ef 25%, #48cae4 37.5%, #00b4d8 50%, #0096c7 62.5%, #0077b6 75%, #023e8a 87.5%, #03071e 100%);*/
   border-radius: 20px;
   overflow: hidden;
@@ -322,7 +374,7 @@ select::-webkit-scrollbar {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #9bdc28;
+  background: rgba(155, 220, 40, 0.5);
   clip-path: circle(120px at 80% 20%);
   transition: 1s ease-in-out;
 }
@@ -360,7 +412,7 @@ select::-webkit-scrollbar {
   transform: rotate(-45deg);
   color: rgb(255, 255, 255); 
   border: 25px solid transparent;
-  border-bottom: 25px solid purple;
+  border-bottom: 25px solid rgba(163, 35, 111, 0.5);
 }
 
 
@@ -405,13 +457,13 @@ select::-webkit-scrollbar {
 }
 
 .containerPokemon .pokemonCard:hover .infoBox{
-  height: 150px;
+  height: 165px;
   background: rgba(78, 78, 68, 0.5);
 }
 
 /*! Name of pokemon */
 .containerPokemon .pokemonCard .infoBox h2 {
-  margin: 0;
+  margin: 10px;
   position: relative;
   font-weight: 600;
   color: rgb(20, 2, 2);
@@ -472,7 +524,7 @@ select::-webkit-scrollbar {
 
 
 .containerPokemon .pokemonCard .infoBox .size span{
-  background: seashell;
+  background: rgba(218, 211, 205, 0.4);
   width: 34%;
   height: 20px;
   display: flex;
@@ -490,15 +542,16 @@ select::-webkit-scrollbar {
 
 
 .containerPokemon .pokemonCard .infoBox .size span:hover{
-  background: #9bdc28;
+  background: rgba(155, 220, 40, 0.3);
 }
 
 .color span {
   font-family: 'Courier New', Courier, monospace;
+  text-transform: capitalize;
   font-weight: 600;
 }
 
-
+.color { margin-top: 2%; }
 
 
 
@@ -513,7 +566,8 @@ select::-webkit-scrollbar {
   justify-content: space-around;
   align-items: center;
   top: 30px;
-  background: linear-gradient(115deg, #eeeeee 57.8%, red 57.7%);
+  /*background: linear-gradient(115deg, #eeeeee 57.8%, red 57.7%);*/
+  background: linear-gradient(115deg, #090808 57.8%, rgb(121, 42, 42) 57.7%);
   margin-bottom: 25px;
   
 }

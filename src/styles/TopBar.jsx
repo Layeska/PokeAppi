@@ -7,6 +7,7 @@ const TopBar = () => {
     return (
         <div className='principalBar'>
             <div className='TopBar'>
+                
                 <img src="https://i.postimg.cc/xTfd9zwn/logo-pokedex-6f1fd44625c52ccd693ca4e39b23cc9f.png" alt="" />
             </div>
 

@@ -1,6 +1,6 @@
 import axios from 'axios'
 import React from 'react'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
@@ -8,19 +8,9 @@ const PokemonCard = ({url}) => {
     const [pokemon, setPokemon] = useState({})
     const navigate = useNavigate()
 
-    useEffect(() => {
-        axios.get(url).then(res => setPokemon(res.data))
-    }, [])
+    const ref = useRef(null)
 
-    console.log(pokemon)
-    const numbersRandom = (value) => {
-      const random = Math.floor(Math.random() * value.length)
-      return random
-    }
-    
-    const colors = ['#1C382E','#4C3B1A','#273B4E','#4E4E4E','#4E2359']
-    const c = [
-      {
+    const color = {
         normal: '#f4a261',
         fighting: '#a8dadc',
         grass: '#1C382E',
@@ -40,32 +30,49 @@ const PokemonCard = ({url}) => {
         dark: '#ff758f',
         fairy: '#38b000',
         unknown: '#6fffe9'
-      }
-    ]
-   
-    const bgColor = numbersRandom(colors)
-     {/*style={{background: colors[bgColor]}}*/}
+    }
+
+    useEffect(() => {
+        axios.get(url).then(res => setPokemon(res.data))
+        change()
+    }, [])
+
+    const change = () => {
+        const imagePokemon = ref.current;
+       // console.log(imagePokemon)
+
+        const color1 = color[pokemon.types?.[0]?.type.name]
+        const color2 = color[pokemon.types?.[1]?.type.name]
+        
+       // console.log(color2)
+
+        imagePokemon.style.background = color1
+        imagePokemon.style.border = `solid 6px ${color2 ? color2 : '#73767a'}`
+    }
+
+    console.log(pokemon)
+    {/*style={{background: colors[bgColor]}}*/}
 
     return (
         <div className='containerPokemon'>
-            <div className='pokemonCard'> 
+            <div ref={ref} className='pokemonCard'> 
             <div className='before'></div>
             <div className='pokemonCardItem' onClick={() => navigate(`/pokemon/${pokemon.id}`)}>
-            <div class="ribbon"><p className='before2'>N# {pokemon.id}</p></div>
+            <div className="ribbon"><p className='before2'>N# {pokemon.id}</p></div>
                 <div className='imgBox'>
                     <img src={pokemon.sprites?.other.dream_world.front_default} alt="" />
                 </div>
                 <div className='infoBox'>
                     <h2>{pokemon.name}</h2>
                     <div className='size'>
-                        <h3>Stats:</h3>
+                        {/*<h3>Stats:</h3>*/}
                         <div className='size-col'>
-                          <span> <strong>HP </strong>  {pokemon.stats?.[0].base_stat}</span>
-                          <span> <strong>Speed </strong> {pokemon.stats?.[1].base_stat}</span>
+                            <span> <strong>HP </strong>  {pokemon.stats?.[0].base_stat}</span>
+                            <span> <strong>Speed </strong> {pokemon.stats?.[1].base_stat}</span>
                         </div>
                         <div className='size-col'>
-                          <span> <strong>Defense </strong> {pokemon.stats?.[2].base_stat}</span>
-                          <span> <strong>Attack </strong> {pokemon.stats?.[3].base_stat}</span>
+                            <span> <strong>Defense </strong> {pokemon.stats?.[2].base_stat}</span>
+                            <span> <strong>Attack </strong> {pokemon.stats?.[3].base_stat}</span>
                         </div>
                     </div>
                     <div className="color">
@@ -76,8 +83,6 @@ const PokemonCard = ({url}) => {
             </div>
         </div>
         </div>
-        
-        
     )   
 }
 

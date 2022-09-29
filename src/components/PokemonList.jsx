@@ -5,9 +5,10 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 import PokemonCard from './PokemonCard'
-import TopBar from './styles/TopBar'
+import TopBar from '../styles/TopBar'
 import useApi from '../hook/useApi'
 import usePagination from '../hook/usePagination'
+import Pagination from '../styles/Pagination'
 
 const PokemonList = () => {
     const name = useSelector(state => state.userName)
@@ -27,7 +28,7 @@ const PokemonList = () => {
 
     const searchTypePokemon = (typeList) => axios.get(typeList).then(res => setPokemonList(res.data.pokemon))
     
-    const {pages, setPages, totalPages, pagesNumber, pokemonPaginated } = usePagination(pokemonList)
+    {/*const {pages, setPages, totalPages, pagesNumber, pokemonPaginated } = usePagination(pokemonList)*/}
     
     const handleKeyDown = e => {
         if(e.key === 'Enter') {
@@ -35,6 +36,18 @@ const PokemonList = () => {
             e.preventDefault()
         }
     }
+
+    const [page, setPage] = useState(1)
+    const [perPage, setPerPage] = useState(5)
+
+    const max = pokemonList.length / perPage
+
+    //pokemonList.slice((page-1) * perPage, (page - 1) * perPage + perPage)
+    const lastPokemonIndex = page -1 * perPage
+    const firstPokemonIndex = (page - 1) * (perPage + perPage)
+
+    const pokemonPaginated = pokemonList.slice(firstPokemonIndex, lastPokemonIndex)
+
     
     return (
         <>
@@ -44,13 +57,14 @@ const PokemonList = () => {
 
             <div className='pagination'>
                 <div className='paginationItem'>
-                    <button className='before' onClick={() => setPages(pages - 1)} disabled={pages === 1}><i className="fa-sharp fa-solid fa-caret-left"></i></button>
+                    <Pagination page={page} setPage={setPage} max={max}/>
+                   {/* <button className='before' onClick={() => setPages(pages - 1)} disabled={pages === 1}><i className="fa-sharp fa-solid fa-caret-left"></i></button>
                     { pagesNumber.map((number) => (
                         <button key={number} className='btnIndex' onClick={() => setPages(number)}>{number}</button> ))
-                        
                     }
                     <button className='next' onClick={() => setPages(pages + 1)} disabled={pages === totalPages}><i className="fa-solid fa-caret-right"></i></button>
-                </div>
+                */}
+                    </div>
             </div>
             <br />
             
@@ -76,7 +90,7 @@ const PokemonList = () => {
                 </div>
             </div>
             
-            <div className='pokemonContainer'>
+            <div className='pokemonContainer'> 
                 { pokemonPaginated.map(poke => (
                     <PokemonCard url={poke.url ? poke.url : poke.pokemon.url} key={poke.url ? poke.url : poke.pokemon.url}/>
                 )) }
@@ -89,3 +103,5 @@ const PokemonList = () => {
 
 
 export default PokemonList
+
+//pokemonPaginated
