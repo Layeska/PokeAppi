@@ -34,8 +34,11 @@ const PokemonCard = ({url}) => {
 
     useEffect(() => {
         axios.get(url).then(res => setPokemon(res.data))
-        change()
     }, [])
+
+    useEffect(() => {
+        change()
+    }, [pokemon])
 
     const change = () => {
         const imagePokemon = ref.current;
@@ -60,7 +63,7 @@ const PokemonCard = ({url}) => {
             <div className='pokemonCardItem' onClick={() => navigate(`/pokemon/${pokemon.id}`)}>
             <div className="ribbon"><p className='before2'>N# {pokemon.id}</p></div>
                 <div className='imgBox'>
-                    <img src={pokemon.sprites?.other.dream_world.front_default} alt="" />
+                    <img src={pokemon.sprites?.other.dream_world.front_default} alt="image of pokemon" />
                 </div>
                 <div className='infoBox'>
                     <h2>{pokemon.name}</h2>

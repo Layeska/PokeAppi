@@ -1,14 +1,13 @@
-import React, { useRef } from 'react'
-import axios from 'axios'
-import { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { useState } from 'react'
+import axios from 'axios'
+
+import Pagination from '../styles/Pagination'
+import TopBar from '../styles/TopBar'
 
 import PokemonCard from './PokemonCard'
-import TopBar from '../styles/TopBar'
 import useApi from '../hook/useApi'
-import usePagination from '../hook/usePagination'
-import Pagination from '../styles/Pagination'
 
 const PokemonList = () => {
     const name = useSelector(state => state.userName)
@@ -22,13 +21,11 @@ const PokemonList = () => {
     const {ChangeUrl} = useApi('https://pokeapi.co/api/v2/pokemon/', res => setPokemonList(res.data.results))
     const {ChangeUrl: changeData} = useApi('https://pokeapi.co/api/v2/type/', res => setPokemonType(res.data.results))
 
-    //console.log(pokemonType)
+    console.log(pokemonType)
 
     const searchName = () => navigate(`/pokemon/${nameInput}`)
 
     const searchTypePokemon = (typeList) => axios.get(typeList).then(res => setPokemonList(res.data.pokemon))
-    
-    {/*const {pages, setPages, totalPages, pagesNumber, pokemonPaginated } = usePagination(pokemonList)*/}
     
     const handleKeyDown = e => {
         if(e.key === 'Enter') {
@@ -38,17 +35,16 @@ const PokemonList = () => {
     }
 
     const [page, setPage] = useState(1)
-    const [perPage, setPerPage] = useState(5)
+    const [perPage, setPerPage] = useState(3)
 
     const max = pokemonList.length / perPage
 
     //pokemonList.slice((page-1) * perPage, (page - 1) * perPage + perPage)
-    const lastPokemonIndex = page -1 * perPage
-    const firstPokemonIndex = (page - 1) * (perPage + perPage)
+    const lastPokemonIndex = (page-1) * perPage
+    const firstPokemonIndex = (page - 1) * perPage + perPage
 
-    const pokemonPaginated = pokemonList.slice(firstPokemonIndex, lastPokemonIndex)
+    const pokemonPaginated = pokemonList.slice(lastPokemonIndex, firstPokemonIndex)
 
-    
     return (
         <>
             {ChangeUrl}
@@ -58,13 +54,7 @@ const PokemonList = () => {
             <div className='pagination'>
                 <div className='paginationItem'>
                     <Pagination page={page} setPage={setPage} max={max}/>
-                   {/* <button className='before' onClick={() => setPages(pages - 1)} disabled={pages === 1}><i className="fa-sharp fa-solid fa-caret-left"></i></button>
-                    { pagesNumber.map((number) => (
-                        <button key={number} className='btnIndex' onClick={() => setPages(number)}>{number}</button> ))
-                    }
-                    <button className='next' onClick={() => setPages(pages + 1)} disabled={pages === totalPages}><i className="fa-solid fa-caret-right"></i></button>
-                */}
-                    </div>
+                </div>
             </div>
             <br />
             
@@ -91,17 +81,13 @@ const PokemonList = () => {
             </div>
             
             <div className='pokemonContainer'> 
-                { pokemonPaginated.map(poke => (
+                { pokemonList.slice((page-1) * perPage, (page - 1) * perPage + perPage).map(poke => (
                     <PokemonCard url={poke.url ? poke.url : poke.pokemon.url} key={poke.url ? poke.url : poke.pokemon.url}/>
                 )) }
             </div>
-
-            
         </>
     )
 }
 
 
 export default PokemonList
-
-//pokemonPaginated
