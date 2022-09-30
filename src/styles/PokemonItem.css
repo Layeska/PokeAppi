@@ -204,6 +204,12 @@ main {
     gap: 50px;
 }
 
+.link {
+    backdrop-filter: blur(10px);
+    border-radius: 25%;
+    padding: 20px;
+}
+
 .div-moves .ranges .s{
     display: flex;
     justify-content: center;
