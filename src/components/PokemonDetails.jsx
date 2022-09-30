@@ -55,17 +55,17 @@ const PokemonDetails = () => {
                         </div>
                         <div className='links'>
                             <div className='link'>
-                                <h2>Height: <span>{changeVolumeMt_kg(pokemon.height)} mts = {changeVolumeCm(pokemon.height)} Cm</span></h2>
-                                <h2>Weight: <span>{changeVolumeMt_kg(pokemon.weight)} Kg = {changeVolumeCm(pokemon.height)} Lb</span></h2>
+                                <h2>Height <span>{changeVolumeMt_kg(pokemon.height)} mts {changeVolumeCm(pokemon.height)} Cm</span></h2>
+                                <h2>Weight <span>{changeVolumeMt_kg(pokemon.weight)} Kg {changeVolumeCm(pokemon.height)} Lb</span></h2>
                             </div>
-                            <div className='link'>
+                            <div className='link2'>
                                 <h2>Types</h2>
                                 <p>{pokemon.types?.[0]?.type.name}</p>
                                 <p>{pokemon.types?.[1]?.type.name}</p>
                             </div>
 
-                            <div className='link'>
-                                <h2>Abilities</h2>
+                            <div className='link3'>
+                                <h2 className='title-link'>Abilities</h2>
                                 <p>{pokemon.abilities?.[0]?.ability.name}</p>
                                 <p>{pokemon.types?.[1]?.type.name}</p>
                             </div>
@@ -84,7 +84,7 @@ const PokemonDetails = () => {
                                             pokemon.stats?.map(poke => (
                                                 <div className='items' key={poke.id}>
                                                     <div className='itemTitle'>
-                                                    <h3>{poke.stat.name}</h3>
+                                                        <h3>{poke.stat.name}</h3>
 
                                                     </div>
                                                     <input type='range'  value={poke.base_stat} />

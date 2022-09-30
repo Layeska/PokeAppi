@@ -6,10 +6,29 @@
 
 main {
     min-height: 100vh;
-    background: linear-gradient(to right top, #472836, #4c326d);
+    /*background: linear-gradient(to right top, #472836, #4c326d);*/
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+h1 {
+    color: #2614ea;
+    font-weight: 600;
+    font-size: 3rem;
+    opacity: 0.8;
+    margin-top: 20px;
+    margin-bottom: -35px;
+}
+
+h2, p {
+    color: #0e2180;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+h3 {
+    color: #0e2180;
 }
 
 .circle1, .circle2 {
@@ -34,8 +53,9 @@ main {
 
 .glass {
     min-height: 80vh;
+    height: 140vh;
     width: 60%;
-    background: linear-gradient(to right bottom,rgba(162, 21, 21, 0.7), rgba(255, 255, 255, 0.3));
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     border-radius: 2rem;
     backdrop-filter: blur(2rem);
     display: flex;
@@ -51,37 +71,78 @@ main {
     text-align: center;
     border-radius: 2rem;
     width: 40%;
-    background: linear-gradient(to right bottom,rgba(42, 7, 181, 0.7), rgba(255, 255, 255, 0.3));
+    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
 }
 
-.dashboard .pokemon {
+/*.dashboard .pokemon {
     background: darkcyan;
-}
+}*/
 
 .pokemon .imagePokemon {
-    width: 150px;
-    height: 100%;
+    width: 180px;
+    height: 110%;
 }
 
 .links {
-    background: greenyellow;
+   /* background: greenyellow;*/
+    width: 100%;
 }
 
 .link h2 {
-    background: blue;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    gap: 14px;
+   /* border: solid 2px black;*/
 }
 
 .link span  {
-    background: hotpink;
-    
+   /* background: hotpink;*/
+   font-size: 20px;
+   width: 56%;
+   margin: auto;
 }
 
 .link {
-    display: flex;
+    /*display: flex;
     margin: 2rem 0rem;
     padding: 1rem 5rem;
-    align-items: center;
-    background: darkgoldenrod;
+    align-items: center;*/
+    display: flex;
+    margin-top: 15%;
+  /*  background: darkgoldenrod;*/
+}
+
+.link2 {
+    /*background: rgb(196, 14, 93);*/
+    margin-top: 50px;
+    
+}
+
+.link3 {
+    margin-top: 50px;
+}
+
+.title-link {
+    
+  /*  background: rgb(214, 35, 15);*/
+    height: 20%;
+}
+
+.link2 p {
+   /* background: rgb(46, 33, 2);*/
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+
+
+.link3 p {
+    /*background: darkcyan;*/
+    margin-top: 20px;
+    text-transform: uppercase;
 }
 
 .status {
@@ -95,7 +156,7 @@ main {
 
 .card {
     display: flex;
-    background: linear-gradient(to left top,rgba(146, 15, 113, 0.8),rgba(255, 255, 255, 0.5));
+    background: linear-gradient(to left top,rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.5));
     border-radius: 1rem;
     margin: 5rem 3rem;
     padding: 2rem;
@@ -105,7 +166,6 @@ main {
 }
 
 
-
 .div-moves {
     width: 120%;
     display: flex;
@@ -113,7 +173,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-left: -30px;
-    backdrop-filter: blur(5px);
+  /*  background: yellow;*/
 }
 
 .div-moves h2 {
@@ -131,10 +191,123 @@ main {
 }
 
 .itemTitle {
-   /* background: sienna;*/
-    width: 80%;
+    /*background: sienna;*/
+    width: 40%;
+    height: 35px;
+    text-transform: capitalize;
+    font-size: 15px;
 }
 
+.itemTitle p {
+    margin-left: 20px;
+    background: saddlebrown;
+}
+
+/*.items input[type='range'] {
+    -webkit-appearance: none;
+}
+
+.items input[type='range']::-webkit-slider-runnable-track, input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}*/
+
+input[type=range] {
+    width: 100%;
+    margin: 5px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    background: rgba(48, 113, 169, 0.8);
+    border: 0.6px solid #010101;
+    border-radius: 23.4px;
+    width: 100%;
+    height: 0px;
+    cursor: pointer;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    margin-top: -5.6px;
+    width: 17px;
+    height: 10px;
+    background: rgba(208, 202, 158, 0.9);
+    border: 0;
+    border-radius: 14px;
+    cursor: pointer;
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #72a8d7;
+  }
+  input[type=range]::-moz-range-track {
+    background: rgba(48, 113, 169, 0.8);
+    border: 0.6px solid #010101;
+    border-radius: 23.4px;
+    width: 100%;
+    height: 0px;
+    cursor: pointer;
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 17px;
+    height: 10px;
+    background: rgba(208, 202, 158, 0.9);
+    border: 0;
+    border-radius: 14px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    background: transparent;
+    border-color: transparent;
+    border-width: 6.5px 0;
+    color: transparent;
+    width: 100%;
+    height: 0px;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #173752;
+    border: 0.6px solid #010101;
+    border-radius: 46.8px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: rgba(48, 113, 169, 0.8);
+    border: 0.6px solid #010101;
+    border-radius: 46.8px;
+  }
+  input[type=range]::-ms-thumb {
+    width: 17px;
+    height: 10px;
+    background: rgba(208, 202, 158, 0.9);
+    border: 0;
+    border-radius: 14px;
+    cursor: pointer;
+    margin-top: 0px;
+    /*Needed to keep the Edge thumb centred*/
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: rgba(48, 113, 169, 0.8);
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #72a8d7;
+  }
+  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+  how to remove the virtical space around the range input in IE*/
+  @supports (-ms-ime-align:auto) {
+    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+    input[type=range] {
+      margin: 0;
+      /*Edge starts the margin from the thumb, not the track as other browsers do*/
+    }
+  }
+  
+
+
+
+
+
+  
 .items h3 {
    /* background: rebeccapurple;*/
     padding: 0px 10px;
@@ -158,298 +331,3 @@ main {
   /*  background: rgb(8, 86, 220);*/
     text-align: center;
 }
-
-/*
-.glass {
-    background: rgb(255, 255, 255);
-    min-height: 80vh;
-    width: 60%;
-    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-    border-radius: 2rem;
-    backdrop-filter: blur(2rem);
-    display: flex;
-    z-index: 2;
-    gap: 5%;
-}
-
-.dashboard {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10%;
-    text-align: center;
-    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-    border-radius: 2rem;
-    width: 35%;
-}
-
-.dashboard .imagePokemon {
-    width: 80%;
-    height: 60%;
-    margin-top: 20%;
-}
-
-
-h1 {
-    color: #2614ea;
-    font-weight: 600;
-    font-size: 3rem;
-    opacity: 0.8;
-}
-
-h2, p {
-    color: #0e2180;
-    font-weight: 500;
-    opacity: 0.8;
-}
-
-h3 {
-    color: #426696;
-    font-weight: 600;
-    opacity: 0.8;
-}
-
-/*.link {
-    display: flex;
-    margin: 2rem 0rem;
-    padding: 1rem 5rem;
-    align-items: center;
-    background: darkgoldenrod;
-}
-
-
-main {
-    font-family: "Poppins", sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(to right top, #472836, #4c326d);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.circle1, .circle2 {
-    background: white;
-    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
-    height: 20rem;
-    width: 20rem;
-    position: absolute;
-    border-radius: 50%;
-}
-
-.circle1 {
-    top: 5%;
-    right: 15%;
-}
-
-.circle2 {
-    bottom: 5%;
-    left: 10%;
-}
-
-/*.cards {
-    background: chartreuse;
-}
-
-.card {
-    display: flex;
-    background: linear-gradient(to left top,rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.5));
-    border-radius: 1rem;
-    margin: 6rem 0rem;
-    padding: 2rem;
-    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
-    justify-content: space-around;
-}
-
-.card-info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.card-info img {
-    width: 50%;
-    height: 50%;
-}
-.card-info h2 { text-transform: capitalize; text-align: center;}
-
-.card-info .card-images {
-    width: 100%;
-    margin: auto;
-    padding: auto;
-}
-
-.card-images img {
-    margin-left: 70px;
-}
-
-.card-info img {
-    width: 120px;
-    height: 100px;
-}
-
-.card-info {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-}
-
-.card-info .p-div {
-   
-    display: flex;
-    width: 500px;
-    height: 300px;
-    position: absolute;
-}
-
-.card-info .div-moves {
-    background: rebeccapurple;
-    width: 500px;
-    height: 300px;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    flex-wrap: nowrap;
-}
-
-.card-info button {
-    
-    border: none;
-    display: flex;
-}*/
-
-/*******************************************************************************************/
-/*.card-inf {
-    /*background: saddlebrown;
-    display: flex;
-    max-width: 500px;
-    height: 350px;
-}
-
-.card-inf .div-moves {
-   /* background: yellowgreen;
-    width: 300px;
-    height: 70px;
-    display: flex;
-    gap: 5px;
-    text-align: center;
-    margin-top: -50px;
-    flex-wrap: no-wrap;
-}
-
-/*.div-moves .p-div {
-    background: slateblue;
-    width: 700px;
-    height: 200px;
-}
-*/
-
-/*.class-move {
-    background: lightgreen;
-    width: 100px;
-}*/
-
-/*.card {
-    background: rgb(91, 10, 10);
-}*/
-
-/*.links {
-   
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.link {
-    backdrop-filter: blur(10px);
-    border-radius: 25%;
-    padding: 20px;
-}
-
-.div-moves .ranges .s{
-    display: flex;
-    justify-content: center;
-    width: 120%;
-    margin-top: 20px;
-}
-
-.div-moves .s h3 {
-    margin-right: 15px;
-}
-
-.games {
-    flex: 2;
-}
-
-.status {
-    margin-bottom: 3rem;
-}
-
-.status h1 {
-    text-align: center;
-}
-
-.status input {
-    background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7),rgba(255, 255, 255, 0.3));
-    border: none;
-    width: 50%;
-    padding: 0.5rem;
-    border-radius: 2rem;
-}
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.games {
-    margin: 5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-
-
-
-.progress {
-    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-    width: 100%;
-    height: 25%;
-    border-radius: 1rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.progress::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background: rgb(236, 236, 236);
-    position: absolute;
-    left: 60%;
-}
-
-
-.percentage {
-    font-weight: bold;
-    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}*/
