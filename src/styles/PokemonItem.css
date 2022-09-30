@@ -16,19 +16,21 @@
 }
 
 .dashboard {
-    flex: 1;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    gap: 10%;
     text-align: center;
     background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     border-radius: 2rem;
+    width: 40%;
 }
 
 .dashboard .imagePokemon {
-    width: 110%;
+    width: 80%;
     height: 60%;
+    margin-top: 20%;
 }
 
 
@@ -116,8 +118,12 @@ main {
 
 .card-info .card-images {
     width: 100%;
-    margin: auto 10px;
+    margin: auto;
     padding: auto;
+}
+
+.card-images img {
+    margin-left: 70px;
 }
 
 .card-info img {
@@ -132,7 +138,7 @@ main {
 }
 
 .card-info .p-div {
-    background: salmon;
+   
     display: flex;
     width: 500px;
     height: 300px;
@@ -150,7 +156,7 @@ main {
 }
 
 .card-info button {
-    background: salmon;
+    
     border: none;
     display: flex;
 }
@@ -189,6 +195,17 @@ main {
 /*.card {
     background: rgb(91, 10, 10);
 }*/
+
+.links {
+   
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.link {
+
+}
 
 .games {
     flex: 2;

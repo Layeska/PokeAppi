@@ -45,12 +45,19 @@ const PokemonDetails = () => {
                             <img className='imagePokemon' src={pokemon.sprites?.other.dream_world.front_default} alt="image of pokemon" />
                             <h3>Pokemon Details</h3>
                             <p><strong>{pokemon.name}</strong></p>
-                            {characteristic.descriptions?.[7].description}
+                            
+                            <p>"{characteristic.descriptions?.[7].description}"</p>
                         </div>
                         <div className='links'>
-                            <h2>Height: <span>{pokemon.height} mts</span></h2>
-                            <h2>Weight: <span>{pokemon.weight} mts</span></h2>
-                            
+                            <div className='link'>
+                                <h2>Height: <span>{pokemon.height} mts</span></h2>
+                                <h2>Weight: <span>{pokemon.weight} Kg</span></h2>
+                            </div>
+                            <div className='link'>
+                                <h2>Types</h2>
+                                <p>{pokemon.types?.[0]?.type.name}</p>
+                                <p>{pokemon.types?.[1]?.type.name}</p>
+                            </div>
                         </div>
                     </div>
                     <div className="games">

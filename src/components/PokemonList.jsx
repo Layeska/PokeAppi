@@ -23,7 +23,7 @@ const PokemonList = () => {
 
     const navigate = useNavigate()
 
-    const {ChangeUrl} = useApi('https://pokeapi.co/api/v2/pokemon/', res => setPokemonList(res.data.results))
+    const {ChangeUrl} = useApi('https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0', res => setPokemonList(res.data.results))
     const {ChangeUrl: changeData} = useApi('https://pokeapi.co/api/v2/type/', res => setPokemonType(res.data.results))
 
     console.log(pokemonType)
