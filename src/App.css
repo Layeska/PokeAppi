@@ -7,16 +7,16 @@
   --bg-html: rgb(0,0,0);
   --color-text-input: rgb(207, 207, 207);
   --color-focus-input: rgb(120, 120, 120);
-  --color-text-select: #FFCE31;
+  --color-text-select: rgb(255, 206, 49);
   --color-white:  rgb(255, 255, 255);
-  --shadowCard: rgb(255, 254, 254, 0.3);
+  --shadowCard: rgba(255, 254, 254, 0.3);
 }
 
 html { background: var(--bg-html); color: var(--color-text-input); }
 
 /*-------- Component of UserInput ----------*/
 
-/*++ Principal div ++*/
+/*+++ Principal div +++*/
 .principal {
   display: flex;
   justify-content: center;
@@ -25,7 +25,7 @@ html { background: var(--bg-html); color: var(--color-text-input); }
 
 .cardInput { margin: auto; }
 
-/*++ add image with css ++*/
+/*+++ add image with css +++*/
 .cardInput .img {
   background-image: var(--bg-imgInput);
   background-repeat: no-repeat;
@@ -33,7 +33,7 @@ html { background: var(--bg-html); color: var(--color-text-input); }
   height: 450px;
 }
 
-/*++ CardInfo: Input and button ++*/
+/*+++ CardInfo: Input and button +++*/
 .cardInfo {
   display: flex;
   align-items: center;
@@ -116,9 +116,9 @@ html { background: var(--bg-html); color: var(--color-text-input); }
 
 /******************************************************************************************/
 
-/*-------- PokemonList Component --------*/
-/*TODO: NEW PAGINATION */
-.pagination1 {
+/*-------- Pagination Component --------*/
+/*+++ Pagination +++*/
+.pagination {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,8 +141,8 @@ html { background: var(--bg-html); color: var(--color-text-input); }
   width: 35px;
 }
 
-.pagination1 input {
-  width: 8%;
+.pagination input {
+  width: 20%;
   height: 30px;
   padding: 5px 25px;
   border: none;
@@ -153,7 +153,10 @@ html { background: var(--bg-html); color: var(--color-text-input); }
 
 .pag{ color: var(--color-text-input); }
 
-/*++++++++ Search Pokemon ++++++++*/
+/********************************************************************/
+/*-------- Pokemon List Component --------*/
+
+/*+++ Search Pokemon +++*/
 
 .searchPokemon {
   width: 98%;
@@ -239,8 +242,7 @@ html { background: var(--bg-html); color: var(--color-text-input); }
   transition: all .1s ease;
 }
 
-/*********************************************************************/
-/*TODO: Select and Options */
+/*+++ Select and Options +++*/
 
 select {
  background: transparent;
@@ -525,7 +527,7 @@ select::-webkit-scrollbar { display: none; }
   margin-left: -16%;
 }
 
-/*TODO: Media Queries */
+/*-------- Media Queries (Responsive Page) --------*/
 
 @media screen and (max-width: 960px) {
   /*body {
@@ -659,8 +661,4 @@ select::-webkit-scrollbar { display: none; }
   .pokeBall { visibility: hidden; }
 }
 
-/*-------- Top Bar Component --------*/
-
-
-
-
+/*-------- Spinner Component --------*/

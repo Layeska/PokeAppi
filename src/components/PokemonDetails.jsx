@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import userApi from "../hook/useApi";
 
 import '../styles/PokemonItem.css'
+import PokemonMoves from "../styles/PokemonMoves";
 
 const PokemonDetails = () => {
     const { id } = useParams();
@@ -31,8 +32,8 @@ const PokemonDetails = () => {
     console.log(detailPokemon)
 
     const searchPokemonEvolution = () => {
-        alert('buscando')
-        const {ChangeUrl} = userApi(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`, res => setPokemon(res.data.results))
+        alert('search')
+        
     }
 
     return (
@@ -40,26 +41,37 @@ const PokemonDetails = () => {
             <main>
                 <section className="glass">
                     <div className="dashboard">
-                        <div className="user">
+                        <div className="pokemon">
                             <img className='imagePokemon' src={pokemon.sprites?.other.dream_world.front_default} alt="image of pokemon" />
                             <h3>Pokemon Details</h3>
                             <p><strong>{pokemon.name}</strong></p>
                             {characteristic.descriptions?.[7].description}
                         </div>
                         <div className='links'>
-                            <h2>fsfh</h2>
-                            <p>{}</p>
+                            <h2>Height: <span>{pokemon.height} mts</span></h2>
+                            <h2>Weight: <span>{pokemon.weight} mts</span></h2>
+                            
                         </div>
                     </div>
                     <div className="games">
                         <div className="status">
-                            <h1>Evolutions</h1>
-                            <input type="text" />
+                            <h1>Pokemon Details</h1>
+                            {/*<input type="text" />*/}
                         </div>
                         <div className="cards">
                             <div className="card">
-                                <div className="card-info">
-                                    <button onClick={searchPokemonEvolution}>{evolution.chain?.evolves_to?.[0]?.species.name}</button>
+                                <div className="card-inf">
+                                    <div className='div-moves'>
+                                    {/*
+                                        pokemon.moves?.map(poke => (
+                                            <PokemonMoves key={poke.id} move={poke.move.name}/>
+                                        ))
+                                        //<p>{pokemon.moves?.[0].move.name}</p>
+                                        */}
+                                    </div>
+                                
+                                    {/*<button onClick={searchPokemonEvolution}>{evolution.chain?.evolves_to?.[0]?.species.name}</button>
+                                    <button onClick={searchPokemonEvolution}>{evolution.chain?.evolves_to?.[0]?.evolves_to[0]?.species.name}</button>*/}
                                     {/*<h2>{evolution.chain?.evolves_to?.[0]?.species.name}</h2>
                                     <img src={pokemon.sprites?.other.dream_world.front_default}/>*/}
                                 </div>
@@ -67,8 +79,19 @@ const PokemonDetails = () => {
                             </div>
                             <div className="card">
                                 <div className="card-info">
-                                    <h2>{evolution.chain?.evolves_to?.[0].evolves_to[0]?.species.name}</h2>
-                                    <img src={detailPokemon.sprites?.other.dream_world.front_default}/>
+                                    <div className='card-images'>
+                                        {/*<h2>{searchPokemonEvolution}{evolution.chain?.evolves_to?.[0]?.species.name}</h2>
+                                        <img src={detailPokemon.sprites?.other.dream_world.front_default}/>*/}
+                                    </div>
+                                    <div className='card-images'>
+                                        <h2>Images of {pokemon.name}</h2>
+                                        {/*<h2>{evolution.chain?.evolves_to?.[0].evolves_to[0]?.species.name}</h2>*/}
+                                        <img src={detailPokemon.sprites?.back_default}/>
+                                        <img src={detailPokemon.sprites?.front_shiny}/>
+                                        <img src={detailPokemon.sprites?.other.home.front_default}/>
+                                        <img src={detailPokemon.sprites?.other.home.front_shiny}/>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>

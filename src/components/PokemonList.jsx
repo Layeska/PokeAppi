@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 
 import Pagination from '../styles/Pagination'
@@ -8,6 +8,8 @@ import TopBar from '../styles/TopBar'
 
 import PokemonCard from './PokemonCard'
 import useApi from '../hook/useApi'
+import IsLoadingSpinner from '../styles/IsLoadingSpinner'
+import { getPokemon } from '../slices/newPokemon.slice'
 
 const PokemonList = () => {
     const name = useSelector(state => state.userName)
@@ -15,6 +17,9 @@ const PokemonList = () => {
     const [pokemonList, setPokemonList] = useState([])
     const [pokemonType, setPokemonType] = useState([])
     const [nameInput, setNameInput] = useState('')
+
+    //TODO: pag loading
+    const loading = useSelector(state => state.loading)
 
     const navigate = useNavigate()
 
@@ -45,12 +50,33 @@ const PokemonList = () => {
 
     const pokemonPaginated = pokemonList.slice(lastPokemonIndex, firstPokemonIndex)
 
+
+    /*
+    
+    {
+        isLoading ? ( 
+        <div className="loader-container">
+            <div className="spinner"></div>
+        </div> ) : (
+    <>
+    */
+
+    /*const isLoading = useSelector(state => state.isLoading)
+    const dispatch = useDispatch()
+
+    
+
+     useEffect(() => {
+        dispatch(getPokemon())
+    }, [])*/
+
     return (
         <>
             {ChangeUrl}
             {changeData}
             <TopBar/>
-            
+            {/* isLoading && <IsLoadingSpinner/> */}
+       
             <div className='searchPokemon'>
                 <label className='labelSearch' htmlFor="">
                     <input onKeyDown={handleKeyDown}  id={'name'} type="text" value={nameInput} onChange={e => setNameInput(e.target.value)}/>

@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 
 const Pagination = ({page, setPage, max}) => {
-
     const [input, setInput] = useState(1)
 
     const nextPage = () => {
-        setInput(parseInt(input+1))
-        setPage(parseInt(page + 1))
+        setPage(parseInt(page+1))
+        setInput(parseInt(input)+1)
     }
 
     const previousPage = () => {
@@ -30,7 +29,7 @@ const Pagination = ({page, setPage, max}) => {
     const onChange = (e) => setInput(e.target.value)
 
     return (
-        <div className='pagination1'>
+        <div className='pagination'>
             <button disabled={page == 1 || page < 1} className='btn' onClick={previousPage}><i className="fa-sharp fa-solid fa-caret-left"></i></button>
             <input value={input} autoComplete='off' onChange={(e) => onChange(e)} onKeyDown={(e) => onKeyDown(e)}/>
             <p className='pag'>de {Math.ceil(max)} Pag</p>

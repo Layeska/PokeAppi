@@ -8,7 +8,7 @@ import PokemonDetails from './components/PokemonDetails'
 import ProtectedRoute from './components/ProtectedRoute'
 
 import { useSelector } from 'react-redux'
-import IsLoadingSpinner from './styles/IsLoadingSpinner'
+
 
 function App() {
   const loading = useSelector(state => state.loading)

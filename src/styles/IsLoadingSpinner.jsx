@@ -2,7 +2,7 @@ import React from 'react'
 
 const IsLoadingSpinner = () => {
     return (
-        <div class="wrapper"><div class="pokeBall"></div></div>
+        <div className="wrapper"><div className="pokeBall"></div></div>
     )
 }
 
