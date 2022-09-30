@@ -69,6 +69,26 @@ const PokemonDetails = () => {
                             <div className="card">
                                 <div className="card-inf">
                                     <div className='div-moves'>
+                                        <div className="ranges">
+                                            <br />
+                                            <br />
+                                            {
+                                                pokemon.stats?.map(poke => (
+                                                    <div className="s" key={poke.id}>
+                                                        <h3>{poke.stat.name}</h3>
+                                                        <input type="range"  value={poke.base_stat} />
+                                                        <p>{poke.base_stat}%</p>
+                                                    </div>
+                                                ))
+                                            }
+                                            {/*<input type="range"  value={pokemon.stats[0].base_stat} />
+                                            <p>{pokemon.stats[0].base_stat}%</p>*/}
+                                        </div>
+                                        <div>
+                                            {/*<input type="range"  value={pokemon.stats[0].base_stat} />
+                                            <p>{pokemon.stats[0].base_stat}%</p>*/}
+                                        </div>
+
                                     {/*
                                         pokemon.moves?.map(poke => (
                                             <PokemonMoves key={poke.id} move={poke.move.name}/>
