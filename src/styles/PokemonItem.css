@@ -79,9 +79,10 @@ h3 {
 }*/
 
 @media screen and (max-width: 1146px) {
-    /*.glass {
-        background: rgb(127, 63, 17);
-    }*/
+    .glass {
+      /*  background: rgb(127, 63, 17);*/
+        width: 90%;
+    }
 
     .dashboard {
         /*background: rebeccapurple;*/
@@ -116,25 +117,44 @@ h3 {
         75%  { top: -240%; }
         100% { top: -245%; }
     }
+    .links {
+        /*background: firebrick;*/
+        margin-left: -50px;
+    }
 
     .link2  {
-        /*background: saddlebrown;*/
+      /*  background: saddlebrown;*/
         margin-top: 10px !important;
+        margin-left: 50px;
     }
 
     .link3 {
         margin-top: 28px !important;
+        margin-left: 50px;
     }
 }
 
 @media screen and (max-width: 822px) {
     .glass {
-       /* background: rebeccapurple;*/
+      /* background: rgb(240, 236, 18);*/
         width: 80%;
     }
     /*.dashboard {
         background: salmon;
     }*/
+
+    /*.cards {
+        background: goldenrod;
+    }*/
+
+    .link {
+        /*background: floralwhite;*/
+        margin-left: -10px !important;
+    }
+
+    .card-images  img {
+        margin-left: 10% !important;
+    }
 }
 
 @media screen and (max-width: 664px) {
@@ -142,20 +162,29 @@ h3 {
        /* background: rebeccapurple;*/
         width: 86%;
     }
-    /*.dashboard {
+   /* .dashboard {
         background: rgb(7, 148, 187);
     }*/
+
+    .cards {
+        margin-left: -20px;
+    }
+
+    .links {
+      /*  background: firebrick;*/
+        margin-left: -80px;
+    }
 }
 
 @media screen and (max-width: 573px) {
     .glass {
-       /* background: rebeccapurple;*/
+       /* background: rgb(84, 4, 164);*/
         width: 86%;
     }
-    /*.dashboard {
-        background: rgb(41, 203, 87);
+    .dashboard {
+       /* background: rgb(41, 203, 87);*/
         
-    }*/
+    }
 
     
 }
@@ -176,7 +205,7 @@ h3 {
     }
 
     .link2  {
-        /*background: saddlebrown;*/
+       /* background: saddlebrown;*/
         margin-top: 26px !important;
     }
 }
@@ -196,6 +225,16 @@ h3 {
         margin-left: -10%;
     }
 
+    .link {
+        /*background: green;*/
+        margin-left: -20px !important;
+    }
+
+    .status h1 {
+       /* background-color: chartreuse;*/
+        margin-left: -50px;
+    }
+
     .card-info {
         width: 200%;
         margin-left: -30%;
@@ -212,7 +251,7 @@ h3 {
         font-size: 14px;
     }
     .glass {
-       /* background: rgb(11, 11, 220);*/
+       /* background: rgb(150, 9, 49);*/
         width: 92%;
     }
 
@@ -226,7 +265,7 @@ h3 {
     }
 
     .card-inf {
-        /*background: slateblue;*/
+       /* background: slateblue;*/
         width: 90%;
         margin-left: 10%;
     }
@@ -244,13 +283,13 @@ h3 {
     }
 
     .glass {
-       
+      /* background: #173752;*/
         height: 80%;
     }
     
     .dashboard {
         font-size: 14px;
-       /* background: rgb(183, 31, 56);*/
+      /*  background: rgb(183, 31, 56);*/
         display: flex;
         flex-direction: row;
         height: 80%;
@@ -284,16 +323,22 @@ h3 {
 }
 
 @media screen and (max-width: 418px) {
-   /* .dashboard {
+    /*.dashboard {
         background: salmon;
     }*/
 
+    /*.glass {
+        background: darkcyan;
+    }*/
+
+   
+
     .pokemon  {
-        margin-top: -125px;
-        margin-left: 100px;
+        margin-top: -185px;
+        margin-left: 80px;
     }
     .cards {
-        /*background: hotpink;*/
+      /*  background: hotpink;*/
         margin-top: 138px;
         width: 300px;
         margin-left: -140px;
@@ -301,6 +346,9 @@ h3 {
 }
 
 @media screen and (max-width: 306px) {
+    /*.glass {
+        background: darkgreen;
+    }*/
     .pokemon {
         margin-left: 60px;
     }
@@ -313,33 +361,69 @@ h3 {
     }
 
     .div-moves {
-      /*  background: saddlebrown;*/
+        /*background: saddlebrown;*/
         margin: -5px;
     }
 
+    .pokemon {
+        /*background: saddlebrown;*/
+       
+        margin-top: -180px;
+    }
 
-    /*.dashboard {
+   /* .dashboard {
         background: rebeccapurple;
     }*/
 
     .card img {
         margin-right: -150px;
-       /* background: darkcyan;*/
+     /*   background: darkcyan;*/
     }
 }
 
 
 @media screen and (max-width: 296px) {
+   /* .glass {
+        background: skyblue;
+    }*/
     .cards {
         /*background-color: yellow;*/
-        width: 170%;
+        width: 180%;
+        margin-left: -120px;
+    }
+
+    .pokemon {
+        /*background: saddlebrown;*/
+        margin-left: 50px;
+        margin-top: -180px;
+    }
+
+    .card-info img {
+     /*   background: red ;*/
+        margin-left: 4px !important;
     }
 }
 
 @media screen and (max-width: 268px) {
+    /*.glass { background: darkmagenta;}*/
     .cards {
        /* background: firebrick;*/
         width: 160%;
+    }
+
+    .pokemon {
+        /*background: saddlebrown;*/
+        margin-left: 40px;
+        margin-top: -180px;
+    }
+
+    .card-info img {
+        /*   background: red ;*/
+           margin-left: 1px !important;
+    }
+
+    .card-images img {
+        width: 140px !important;
     }
 }
 
@@ -351,7 +435,7 @@ h3 {
 
 
 .links {
-    /*background: greenyellow;*/
+  /*  background: greenyellow;*/
     width: 100%;
     margin-top: 20px;
 }
@@ -363,7 +447,7 @@ h3 {
     justify-content: space-between;
     text-align: center;
     gap: 14px;
-   /* border: solid 2px black;*/
+  /*  border: solid 2px black;*/
 }
 
 .link span  {
@@ -374,17 +458,17 @@ h3 {
 }
 
 .link {
-    /*display: flex;
+    display: flex;
     margin: 2rem 0rem;
     padding: 1rem 5rem;
-    align-items: center;*/
+    align-items: center;
     display: flex;
     margin-top: 15%;
-  /*  background: darkgoldenrod;*/
+   /* background: darkgoldenrod;*/
 }
 
 .link2 {
-    /*background: rgb(196, 14, 93);*/
+   /* background: rgb(196, 14, 93);*/
     margin-top: 50px;
     
 }
@@ -395,12 +479,12 @@ h3 {
 
 .title-link {
     
-  /*  background: rgb(214, 35, 15);*/
+   /* background: rgb(214, 35, 15);*/
     height: 20%;
 }
 
 .link2 p {
-   /* background: rgb(46, 33, 2);*/
+ /*   background: rgb(46, 33, 2);*/
     margin-top: 20px;
     text-transform: uppercase;
 }
@@ -408,7 +492,7 @@ h3 {
 
 
 .link3 p {
-    /*background: darkcyan;*/
+   /* background: darkcyan;*/
     margin-top: 20px;
     text-transform: uppercase;
 }
