@@ -80,12 +80,12 @@ h3 {
 
 @media screen and (max-width: 1146px) {
     .glass {
-        background: rgb(127, 63, 17);
+       /* background: rgb(127, 63, 17);*/
         width: 90%;
     }
 
     .dashboard {
-        background: rebeccapurple;
+        /*background: rebeccapurple;*/
         gap: 45px;
     }
 
@@ -136,11 +136,11 @@ h3 {
 
 @media screen and (max-width: 822px) {
     .glass {
-       background: rgb(240, 236, 18);
+      /* background: rgb(240, 236, 18);*/
         width: 80%;
     }
     .dashboard {
-        background: salmon;
+      /*  background: salmon;*/
     }
 
     /*.cards {
@@ -159,12 +159,12 @@ h3 {
 
 @media screen and (max-width: 664px) {
     .glass {
-    background: rebeccapurple;
+   /* background: rebeccapurple;*/
         width: 86%;
     }
-    .dashboard {
+    /*.dashboard {
         background: rgb(7, 148, 187);
-    }
+    }*/
 
     .cards {
         margin-left: -20px;
@@ -178,7 +178,7 @@ h3 {
 
 @media screen and (max-width: 573px) {
     .glass {
-       background: rgb(84, 4, 164);
+      /* background: rgb(84, 4, 164);*/
         width: 86%;
     }
     .dashboard {
@@ -191,7 +191,7 @@ h3 {
 
 @media screen and (max-width: 587px) {
     .glass {
-        background: rgb(228, 98, 11);
+       /* background: rgb(228, 98, 11);*/
         width: 92%;
     }
 
@@ -200,7 +200,7 @@ h3 {
     }
 
     .cards {
-        background: rgb(46, 23, 2);
+      /*  background: rgb(46, 23, 2);*/
         margin-left: -10%;
     }
 
@@ -215,7 +215,7 @@ h3 {
         width: 102%;
     }
     .glass {
-        background: rgb(223, 3, 105);
+       /* background: rgb(223, 3, 105);*
         width: 90%;
     }
 
@@ -234,7 +234,7 @@ h3 {
     }
 
     .status h1 {
-       /* background-color: chartreuse;*/
+        /*background-color: chartreuse;*/
         margin-left: -50px;
     }
 
@@ -254,7 +254,7 @@ h3 {
         font-size: 14px;
     }
     .glass {
-        background: rgb(150, 9, 49);
+       /*background: rgb(150, 9, 49);*/
         width: 92%;
     }
 
@@ -285,15 +285,20 @@ h3 {
         
     }
 
+    .dashboard {
+        background: transparent;
+
+    }
+
     .glass {
-       background: #0279db;
+       /*background: #0279db;*/
        width: 86%;
         height: 80%;
     }
     
     .dashboard {
         font-size: 14px;
-        background: rgb(183, 31, 56);
+      /*  background: rgb(183, 31, 56);*/
         display: flex;
         flex-direction: row;
         height: 80%;
@@ -327,9 +332,9 @@ h3 {
 }
 
 @media screen and (max-width: 418px) {
-    .dashboard {
+   /* .dashboard {
         background: salmon;
-    }
+    }*/
 
     .glass {
         /*background: darkcyan;*/
@@ -356,9 +361,9 @@ h3 {
         width: 115%;
     }
 
-    .glass {
+   /* .glass {
         background: darkgreen;
-    }
+    }*/
     .pokemon {
         margin-left: 60px;
     }
@@ -399,9 +404,9 @@ h3 {
         width: 120%;
     }
 
-    .glass {
+   /* .glass {
         background: skyblue;
-    }
+    }*/
     .cards {
         /*background-color: yellow;*/
         width: 180%;
@@ -426,7 +431,7 @@ h3 {
         width: 140%;
     }
 
-    .glass { background: darkmagenta;}
+    /*.glass { background: darkmagenta;}*/
     .cards {
        /* background: firebrick;*/
         width: 160%;
