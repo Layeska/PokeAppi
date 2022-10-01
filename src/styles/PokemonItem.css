@@ -23,7 +23,7 @@ h1 {
 
 h2, p {
     color: #0e2180;
-    font-weight: 500;
+    font-weight: 400;
     opacity: 0.8;
 }
 
@@ -53,7 +53,7 @@ h3 {
 
 .glass {
     min-height: 80vh;
-    height: 140vh;
+    height: 130vh;
     width: 60%;
     background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     border-radius: 2rem;
@@ -78,14 +78,282 @@ h3 {
     background: darkcyan;
 }*/
 
+@media screen and (max-width: 1146px) {
+    /*.glass {
+        background: rgb(127, 63, 17);
+    }*/
+
+    .dashboard {
+        /*background: rebeccapurple;*/
+        gap: 45px;
+    }
+
+    .card-info {
+        height: 200px;
+        line-height: 1em;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 100%;
+    }
+
+    .card-images { margin-left: 10%; }
+
+    .card-images h2 { margin-left: -40px; }
+
+    .card-images img {
+        position: relative;
+        animation-name: toMove;
+        animation-duration: 6s;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+    }
+
+    @keyframes toMove {
+        0%   { top:  0%    }
+        25%  { top: -65%;  }
+        50%  { top: -150%; }
+        75%  { top: -240%; }
+        100% { top: -245%; }
+    }
+
+    .link2  {
+        /*background: saddlebrown;*/
+        margin-top: 10px !important;
+    }
+
+    .link3 {
+        margin-top: 28px !important;
+    }
+}
+
+@media screen and (max-width: 822px) {
+    .glass {
+       /* background: rebeccapurple;*/
+        width: 80%;
+    }
+    /*.dashboard {
+        background: salmon;
+    }*/
+}
+
+@media screen and (max-width: 664px) {
+    .glass {
+       /* background: rebeccapurple;*/
+        width: 86%;
+    }
+    /*.dashboard {
+        background: rgb(7, 148, 187);
+    }*/
+}
+
+@media screen and (max-width: 573px) {
+    .glass {
+       /* background: rebeccapurple;*/
+        width: 86%;
+    }
+    /*.dashboard {
+        background: rgb(41, 203, 87);
+        
+    }*/
+
+    
+}
+
+@media screen and (max-width: 587px) {
+    .glass {
+       /* background: rgb(228, 98, 11);*/
+        width: 92%;
+    }
+
+    .dashboard {
+        gap: 58px;
+    }
+
+    .cards {
+       /* background: rgb(46, 23, 2);*/
+        margin-left: -10%;
+    }
+
+    .link2  {
+        /*background: saddlebrown;*/
+        margin-top: 26px !important;
+    }
+}
+
+@media screen and (max-width: 546px) {
+    .glass {
+       /* background: rgb(167, 29, 52);*/
+        width: 90%;
+    }
+
+    .cards{
+        width: 95%;
+    }
+
+    .cards {
+       /* background: rgb(46, 23, 2);*/
+        margin-left: -10%;
+    }
+
+    .card-info {
+        width: 200%;
+        margin-left: -30%;
+    }
+
+    .card-images h2 {
+        margin-left: 6px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 477px) {
+    .details {
+        font-size: 14px;
+    }
+    .glass {
+       /* background: rgb(11, 11, 220);*/
+        width: 92%;
+    }
+
+    span {
+        font-size: 18px !important;
+    }
+
+    .cards{
+        width: 95%;
+        margin-left: -10%;
+    }
+
+    .card-inf {
+        /*background: slateblue;*/
+        width: 90%;
+        margin-left: 10%;
+    }
+
+    .pokemon .imagePokemon{
+        width: 140px !important;
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+    .details {
+        width: 90%;
+        
+    }
+
+    .glass {
+       
+        height: 80%;
+    }
+    
+    .dashboard {
+        font-size: 14px;
+       /* background: rgb(183, 31, 56);*/
+        display: flex;
+        flex-direction: row;
+        height: 80%;
+    }
+
+    .pokemon {
+        width: 100%;
+        margin-top: 100%;
+    }
+
+    .links {
+        visibility: hidden;
+    }
+
+    .cards {
+    
+        margin-left: -43px;
+        margin-top: -148px;
+    }
+
+    .status h1 {
+        visibility: hidden;
+    }
+
+    .div-moves h3 {
+        font-size: 14px;
+    }  
+    
+    
+    
+}
+
+@media screen and (max-width: 418px) {
+   /* .dashboard {
+        background: salmon;
+    }*/
+
+    .pokemon  {
+        margin-top: -125px;
+        margin-left: 100px;
+    }
+    .cards {
+        /*background: hotpink;*/
+        margin-top: 138px;
+        width: 300px;
+        margin-left: -140px;
+    }
+}
+
+@media screen and (max-width: 306px) {
+    .pokemon {
+        margin-left: 60px;
+    }
+
+    .pokemon {
+        text-align: center;
+        width: 200%;
+     /*   background: saddlebrown;*/
+        
+    }
+
+    .div-moves {
+      /*  background: saddlebrown;*/
+        margin: -5px;
+    }
+
+
+    /*.dashboard {
+        background: rebeccapurple;
+    }*/
+
+    .card img {
+        margin-right: -150px;
+       /* background: darkcyan;*/
+    }
+}
+
+
+@media screen and (max-width: 296px) {
+    .cards {
+        /*background-color: yellow;*/
+        width: 170%;
+    }
+}
+
+@media screen and (max-width: 268px) {
+    .cards {
+       /* background: firebrick;*/
+        width: 160%;
+    }
+}
+
 .pokemon .imagePokemon {
     width: 180px;
     height: 110%;
 }
 
+
+
 .links {
-   /* background: greenyellow;*/
+    /*background: greenyellow;*/
     width: 100%;
+    margin-top: 20px;
 }
 
 .link h2 {
@@ -158,7 +426,7 @@ h3 {
     display: flex;
     background: linear-gradient(to left top,rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.5));
     border-radius: 1rem;
-    margin: 5rem 3rem;
+    margin: 1rem 3rem;
     padding: 2rem;
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
     justify-content: space-around;
@@ -330,4 +598,9 @@ input[type=range] {
 .card-images h2 {
   /*  background: rgb(8, 86, 220);*/
     text-align: center;
+}
+
+.status h1 {
+    /*background: saddlebrown;*/
+    height: 90px;
 }

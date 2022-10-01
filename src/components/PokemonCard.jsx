@@ -6,10 +6,6 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 
-
-
-
-
 const PokemonCard = ({url}) => {
     const [pokemon, setPokemon] = useState({})
     const navigate = useNavigate()
@@ -49,6 +45,7 @@ const PokemonCard = ({url}) => {
         imagePokemon.style.background = color1
         imagePokemon.style.border = `solid 6px ${color2 ? color2 : '#73767a'}`
     }
+
 
     useEffect(() => { change() }, [pokemon])
 

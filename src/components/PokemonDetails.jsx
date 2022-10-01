@@ -31,6 +31,33 @@ const PokemonDetails = () => {
     console.log(evolution)
     console.log(detailPokemon)
 
+
+    const color = {
+        normal: '#b7b7a4',
+        fighting: '#1d3557',
+        grass: '#52796f',
+        fire: '#9e2a2b',
+        flying: '#6b705c',
+        poison: '#ffc6ff',
+        ground: '#f48c06',
+        Rock: '#006d77',
+        Bug: '#7f5539',
+        ghost: '#64dfdf',
+        steel: '#9d8189',
+        water: '#00bbf9',
+        electric: '#fee440',
+        psychic: '#7b2cbf',
+        ice: '#abc4ff',
+        dragon: '#ffb700',
+        dark: '#ff758f',
+        fairy: '#38b000',
+        unknown: '#6fffe9'
+    }
+
+    const color1 = color[pokemon.types?.[0]?.type.name]
+    const color2 = color[pokemon.types?.[1]?.type.name]
+
+
     const searchPokemonEvolution = () => {
         alert('search')
         
@@ -44,30 +71,30 @@ const PokemonDetails = () => {
     const changeVolumeLb = (info) => { return info * 2.205 }
     return (
         <div className='details'>
-            <main>
+            <main style={{background: `linear-gradient(to right top, ${color1}, ${color2 ? color2 : '#73767a'})`}}>
                 <section className='glass'>
                     <div className='dashboard'>
                         <div className='pokemon'>
                             <img className='imagePokemon' src={pokemon.sprites?.other.dream_world.front_default} alt="image of pokemon" />
                             <h3>Pokemon Details</h3>
-                            <p><strong>{pokemon.name}</strong></p>
+                            <p ><strong>{pokemon.name}</strong></p>
                             <p>"{characteristic.descriptions?.[7].description}"</p>
                         </div>
                         <div className='links'>
                             <div className='link'>
-                                <h2>Height <span>{changeVolumeMt_kg(pokemon.height)} mts {changeVolumeCm(pokemon.height)} Cm</span></h2>
-                                <h2>Weight <span>{changeVolumeMt_kg(pokemon.weight)} Kg {changeVolumeCm(pokemon.height)} Lb</span></h2>
+                                <h2> <strong>Height</strong> <span>{changeVolumeMt_kg(pokemon.height)} mts {changeVolumeCm(pokemon.height)} Cm</span></h2>
+                                <h2> <strong>Weight</strong> <span>{changeVolumeMt_kg(pokemon.weight)} Kg {changeVolumeCm(pokemon.height)} Lb</span></h2>
                             </div>
                             <div className='link2'>
-                                <h2>Types</h2>
+                                <h2><b>Types</b></h2>
                                 <p>{pokemon.types?.[0]?.type.name}</p>
                                 <p>{pokemon.types?.[1]?.type.name}</p>
                             </div>
-
                             <div className='link3'>
-                                <h2 className='title-link'>Abilities</h2>
+                                <h2 className='title-link'> <b>Abilities</b></h2>
                                 <p>{pokemon.abilities?.[0]?.ability.name}</p>
                                 <p>{pokemon.types?.[1]?.type.name}</p>
+                                <p>{pokemon.types?.[2]?.type.name}</p>
                             </div>
                         </div>
                     </div>
@@ -79,45 +106,25 @@ const PokemonDetails = () => {
                             <div className='card'>
                                 <div className='card-inf'>
                                     <div className='div-moves'>
-                                        <h2>Stats</h2>
+                                        <h2 style={{fontWeight: '600'}}>Stats</h2>
                                         {
                                             pokemon.stats?.map(poke => (
                                                 <div className='items' key={poke.id}>
                                                     <div className='itemTitle'>
                                                         <h3>{poke.stat.name}</h3>
-
                                                     </div>
                                                     <input type='range'  value={poke.base_stat} />
                                                     <p>{poke.base_stat}%</p>
                                                 </div>
                                             ))
                                         }
-                                        
-                                        <div>
-                                        {/*
-                                            pokemon.moves?.map(poke => (
-                                            <PokemonMoves key={poke.id} move={poke.move.name}/>
-                                        ))
-                                        //<p>{pokemon.moves?.[0].move.name}</p>
-                                        */}
-                                        </div>
                                     </div>
-                                
-                                    {/*<button onClick={searchPokemonEvolution}>{evolution.chain?.evolves_to?.[0]?.species.name}</button>
-                                    <button onClick={searchPokemonEvolution}>{evolution.chain?.evolves_to?.[0]?.evolves_to[0]?.species.name}</button>*/}
-                                    {/*<h2>{evolution.chain?.evolves_to?.[0]?.species.name}</h2>
-                                    <img src={pokemon.sprites?.other.dream_world.front_default}/>*/}
                                 </div>
-                                
                             </div>
                             <div className='card'>
                                 <div className='card-info'>
-                                    <div className='card-images'>
-                                        {/*<h2>{searchPokemonEvolution}{evolution.chain?.evolves_to?.[0]?.species.name}</h2>
-                                        <img src={detailPokemon.sprites?.other.dream_world.front_default}/>*/}
-                                    </div>
-                                    <div className='card-images'>
-                                        <h2>Images of {pokemon.name}</h2>
+                                    <div className='card-images card2'>
+                                        <h2 style={{fontWeight: '600'}}>Images of {pokemon.name}</h2>
                                         <img src={detailPokemon.sprites?.back_default}/>
                                         <img src={detailPokemon.sprites?.front_shiny}/>
                                         <img src={detailPokemon.sprites?.other.home.front_default}/>
