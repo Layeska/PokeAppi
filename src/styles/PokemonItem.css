@@ -80,12 +80,12 @@ h3 {
 
 @media screen and (max-width: 1146px) {
     .glass {
-      /*  background: rgb(127, 63, 17);*/
+        background: rgb(127, 63, 17);
         width: 90%;
     }
 
     .dashboard {
-        /*background: rebeccapurple;*/
+        background: rebeccapurple;
         gap: 45px;
     }
 
@@ -136,12 +136,12 @@ h3 {
 
 @media screen and (max-width: 822px) {
     .glass {
-      /* background: rgb(240, 236, 18);*/
+       background: rgb(240, 236, 18);
         width: 80%;
     }
-    /*.dashboard {
+    .dashboard {
         background: salmon;
-    }*/
+    }
 
     /*.cards {
         background: goldenrod;
@@ -159,12 +159,12 @@ h3 {
 
 @media screen and (max-width: 664px) {
     .glass {
-       /* background: rebeccapurple;*/
+    background: rebeccapurple;
         width: 86%;
     }
-   /* .dashboard {
+    .dashboard {
         background: rgb(7, 148, 187);
-    }*/
+    }
 
     .cards {
         margin-left: -20px;
@@ -178,7 +178,7 @@ h3 {
 
 @media screen and (max-width: 573px) {
     .glass {
-       /* background: rgb(84, 4, 164);*/
+       background: rgb(84, 4, 164);
         width: 86%;
     }
     .dashboard {
@@ -191,7 +191,7 @@ h3 {
 
 @media screen and (max-width: 587px) {
     .glass {
-       /* background: rgb(228, 98, 11);*/
+        background: rgb(228, 98, 11);
         width: 92%;
     }
 
@@ -200,7 +200,7 @@ h3 {
     }
 
     .cards {
-       /* background: rgb(46, 23, 2);*/
+        background: rgb(46, 23, 2);
         margin-left: -10%;
     }
 
@@ -211,8 +211,11 @@ h3 {
 }
 
 @media screen and (max-width: 546px) {
+    .details {
+        width: 102%;
+    }
     .glass {
-       /* background: rgb(167, 29, 52);*/
+        background: rgb(223, 3, 105);
         width: 90%;
     }
 
@@ -251,7 +254,7 @@ h3 {
         font-size: 14px;
     }
     .glass {
-       /* background: rgb(150, 9, 49);*/
+        background: rgb(150, 9, 49);
         width: 92%;
     }
 
@@ -278,18 +281,19 @@ h3 {
 
 @media screen and (max-width: 460px) {
     .details {
-        width: 90%;
+        width: 108%;
         
     }
 
     .glass {
-      /* background: #173752;*/
+       background: #0279db;
+       width: 86%;
         height: 80%;
     }
     
     .dashboard {
         font-size: 14px;
-      /*  background: rgb(183, 31, 56);*/
+        background: rgb(183, 31, 56);
         display: flex;
         flex-direction: row;
         height: 80%;
@@ -323,13 +327,14 @@ h3 {
 }
 
 @media screen and (max-width: 418px) {
-    /*.dashboard {
+    .dashboard {
         background: salmon;
-    }*/
+    }
 
-    /*.glass {
-        background: darkcyan;
-    }*/
+    .glass {
+        /*background: darkcyan;*/
+        margin-left: -10px;
+    }
 
    
 
@@ -346,13 +351,19 @@ h3 {
 }
 
 @media screen and (max-width: 306px) {
-    /*.glass {
+
+    .details {
+        width: 115%;
+    }
+
+    .glass {
         background: darkgreen;
-    }*/
+    }
     .pokemon {
         margin-left: 60px;
     }
 
+    
     .pokemon {
         text-align: center;
         width: 200%;
@@ -383,9 +394,14 @@ h3 {
 
 
 @media screen and (max-width: 296px) {
-   /* .glass {
+
+    .details {
+        width: 120%;
+    }
+
+    .glass {
         background: skyblue;
-    }*/
+    }
     .cards {
         /*background-color: yellow;*/
         width: 180%;
@@ -405,7 +421,12 @@ h3 {
 }
 
 @media screen and (max-width: 268px) {
-    /*.glass { background: darkmagenta;}*/
+
+    .details {
+        width: 140%;
+    }
+
+    .glass { background: darkmagenta;}
     .cards {
        /* background: firebrick;*/
         width: 160%;
@@ -431,6 +452,8 @@ h3 {
     width: 180px;
     height: 110%;
 }
+
+
 
 
 
