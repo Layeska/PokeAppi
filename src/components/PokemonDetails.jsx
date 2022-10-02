@@ -78,12 +78,12 @@ const PokemonDetails = () => {
                             <img className='imagePokemon' src={pokemon.sprites?.other.dream_world.front_default} alt="image of pokemon" />
                             <h3>Pokemon Details</h3>
                             <p ><strong>{pokemon.name}</strong></p>
-                            <p>"{characteristic.descriptions?.[7].description}"</p>
+                            <p><i>"{characteristic.descriptions?.[7].description}"</i></p>
                         </div>
                         <div className='links'>
                             <div className='link'>
-                                <h2> <strong>Height</strong> <span>{changeVolumeMt_kg(pokemon.height)} mts {changeVolumeCm(pokemon.height)} Cm</span></h2>
-                                <h2> <strong>Weight</strong> <span>{changeVolumeMt_kg(pokemon.weight)} Kg {changeVolumeCm(pokemon.height)} Lb</span></h2>
+                                <h2> <strong>Height</strong> <span> {changeVolumeMt_kg(pokemon.height)} mts {changeVolumeCm(pokemon.height)} Cm</span></h2>
+                                <h2> <strong>Weight </strong> <span>{changeVolumeMt_kg(pokemon.weight)} Kg {changeVolumeCm(pokemon.height)} Lb</span></h2>
                             </div>
                             <div className='link2'>
                                 <h2><b>Types</b></h2>
@@ -111,10 +111,9 @@ const PokemonDetails = () => {
                                             pokemon.stats?.map(poke => (
                                                 <div className='items' key={poke.id}>
                                                     <div className='itemTitle'>
-                                                        <h3>{poke.stat.name}</h3>
+                                                        <label>{poke.stat.name}</label>
                                                     </div>
-                                                    <input type='range'  value={poke.base_stat} />
-                                                    <p>{poke.base_stat}%</p>
+                                                    <progress id="file" max="100" value={poke.base_stat}> {poke.base_stat}% </progress>
                                                 </div>
                                             ))
                                         }
@@ -143,3 +142,21 @@ const PokemonDetails = () => {
 }
 
 export default PokemonDetails
+/*
+{
+                                            pokemon.stats?.map(poke => (
+                                                <div className='items' key={poke.id}>
+                                                    <div className='itemTitle'>
+                                                        <h3>{poke.stat.name}</h3>
+                                                    </div>
+                                                    <p>{poke.stat.name}</p>
+                                                    <div class="container">
+                                                        <div class="skill html">{poke.base_stat}</div>
+                                                    </div>
+                                                    <input type='range'  value={poke.base_stat} />
+                                                    <p>{poke.base_stat}%</p>
+                                                </div>
+                                            ))
+                                        }
+
+*/

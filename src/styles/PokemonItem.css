@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+/*++ container principal */
+.details {
+    max-width: 100%;
+}
+
+/*++ container of details */
 main {
     min-height: 100vh;
     /*background: linear-gradient(to right top, #472836, #4c326d);*/
@@ -21,15 +27,13 @@ h1 {
     margin-bottom: -35px;
 }
 
-h2, p {
+h2, p, label {
     color: #0e2180;
     font-weight: 400;
     opacity: 0.8;
 }
 
-h3 {
-    color: #0e2180;
-}
+h3 { color: #0e2180; }
 
 .circle1, .circle2 {
     background: white;
@@ -50,7 +54,7 @@ h3 {
     left: 10%;
 }
 
-
+/*++ to have progress bar and images pokemon */
 .glass {
     min-height: 80vh;
     height: 130vh;
@@ -63,6 +67,7 @@ h3 {
     grid-area: 5%;
 }
 
+/*++ lateral bar */
 .dashboard {
     display: flex;
     flex-direction: column;
@@ -74,19 +79,266 @@ h3 {
     background: linear-gradient(to right bottom,rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
 }
 
-/*.dashboard .pokemon {
-    background: darkcyan;
-}*/
+/*++ pokemon lateral */
+.pokemon .imagePokemon {
+    width: 180px;
+    height: 110%;
+}
+
+/*++ container of Types and Abilities */
+
+.links {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.link h2 {
+    width: 310px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    gap: -45px;
+}
+
+.link span  {
+    font-size: 21px;
+    width: 82%;
+    margin: auto;
+}
+
+.link {
+    display: flex;
+    margin: 2rem 0rem;
+    padding: 1rem 5rem;
+    align-items: center;
+    display: flex;
+    margin-top: 15%;
+}
+
+.link2 { margin-top: -30px; }
+
+.link3 { margin-top: 50px; }
+
+.title-link { height: 20%; }
+
+.link2 p {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.link3 p {
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.status { margin-bottom: 3rem; }
+
+.status h1 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/*++ container stats and images  */
+.card {
+    display: flex;
+    background: linear-gradient(to left top,rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.5));
+    border-radius: 1rem;
+    margin: 1rem 3rem;
+    padding: 2rem;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    justify-content: space-around;
+    width: 80%;
+}
+
+
+.div-moves {
+    width: 120%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: -30px;
+}
+
+.div-moves h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.itemTitle {
+    width: 40%;
+    height: 35px;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.items label { padding: 0px 10px; }
+
+.card-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card-info img {
+    width: 150px;
+    height: 150px;
+    margin-left: 4%;
+}
+
+.card-images h2 {
+    text-align: center;
+}
+
+.status h1 {
+    height: 90px;
+}
+
+
+/*@ ------- Responsive --------*/
+
+@media screen and (max-width: 1920px) {
+    .glass {
+      /*  background: darkcyan;*/
+        height: 92%;
+    }
+
+   /* .dashboard {
+        background: slateblue;
+    }*/
+
+    .pokemon {
+        /*background: saddlebrown;*/
+        width: 250px;
+        height: 280px;
+    }
+
+    .pokemon h3, p, h2 {
+        font-size: 26px;
+    }
+
+    .links {
+        
+        margin-top: 50px;
+    }
+
+
+    .link2 h2 {
+        font-size: 30px;
+    }
+
+    .link h2 span {
+        font-size: 25px;
+    }
+
+    .itemTitle {
+        font-size: 20px;
+        width: 60%;
+    }
+
+    .card-images h2 {
+        margin-left: -15%;
+    }
+    .card-images {
+        margin-left: 10%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .glass {
+      /*  background: red;*/
+        height: 60%;
+    }
+    .dashboard {
+        gap: 50px;
+    }
+
+    .pokemon p{
+        
+        margin-top: 10px;
+    }
+   
+    .link {
+        margin-top: 27%;
+    }
+
+    .link h2 {
+        margin-left: 4px;
+    }
+
+    .card-inf .div-moves{
+        height: 100%;
+    }
+
+    .card .div-moves h2 {
+        margin-top: -50px;
+        
+    }
+
+    .div-moves .itemTitle {
+        margin-top: 10px;
+        font-size: 21.6px;
+    }
+    .card .card-inf {
+        
+        height: 350px;
+    }
+    .card-info {
+        height: 300px;
+        line-height: 1em;
+        overflow: hidden;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .card-images { margin-left: 10%; }
+
+    .card-images h2 { margin-left: -40px; }
+
+    .card-images img {
+        position: relative;
+        animation-name: toMove;
+        animation-duration: 6s;
+        animation-delay: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        margin-left: 40px;
+    }
+
+    @keyframes toMove {
+        0%   { top:  0%    }
+        25%  { top: -45%;  }
+        50%  { top: -150%; }
+        75%  { top: -240%; }
+        100% { top: -245%; }
+    }
+
+    .card-images h2  {
+        position: absolute;
+        margin-left: 5%;
+    }
+}
 
 @media screen and (max-width: 1146px) {
     .glass {
        /* background: rgb(127, 63, 17);*/
         width: 90%;
+        height: 85%;
     }
 
     .dashboard {
-        /*background: rebeccapurple;*/
-        gap: 45px;
+       /* background: rebeccapurple;*/
+        height: 100%;
+        gap: 5px;
     }
 
     .card-info {
@@ -97,7 +349,7 @@ h3 {
         width: 100%;
     }
 
-    .card-images { margin-left: 10%; }
+    .card-images { margin-left: 10%;}
 
     .card-images h2 { margin-left: -40px; }
 
@@ -117,54 +369,112 @@ h3 {
         75%  { top: -240%; }
         100% { top: -245%; }
     }
+
+    .card-images h2  {
+        position: absolute;
+        margin-left: 7%;
+        margin-top: 178px;
+    }
     .links {
-        /*background: firebrick;*/
-        margin-left: -50px;
+      /*  background: firebrick;*/
+        margin-top: -50px;
+    }
+
+    .link span {
+        margin-top: 10px;
     }
 
     .link2  {
       /*  background: saddlebrown;*/
-        margin-top: 10px !important;
-        margin-left: 50px;
+        margin-top: -80px;
+        
     }
 
     .link3 {
         margin-top: 28px !important;
-        margin-left: 50px;
+        height: 139px;
+    }
+}
+
+@media screen and (max-width: 962px) {
+    /*.glass {
+       background: gray;
+    }*/
+
+    .links .link h2 {
+        border: 10px;
+        margin-left: -20px;
+    }
+
+    .link {
+        width: 50%;
+    }
+
+  
+    .link strong {
+        margin-left: 15px;
+        border: 5px solid transparent ;
+    }
+
+    .card-images  img {
+        margin-left: 80px;
+    }
+
+    .link2 {
+        margin-top: -50px;
+    }
+
+    .card-images h2 {
+        margin-left: 10px;
     }
 }
 
 @media screen and (max-width: 822px) {
     .glass {
-      /* background: rgb(240, 236, 18);*/
-        width: 80%;
+     /*  background: rgb(240, 236, 18);*/
+        width: 90%;
     }
     .dashboard {
       /*  background: salmon;*/
     }
 
-    /*.cards {
-        background: goldenrod;
-    }*/
+    .imagePokemon {
+       
+        margin-bottom: 10px;
+    }
 
+    
     .link {
-        /*background: floralwhite;*/
-        margin-left: -10px !important;
+       margin-top: 180px;
+       width: 200px;
+        margin-left: -16% !important;
+    }
+
+    .link h2{
+        margin: 30px;
     }
 
     .card-images  img {
         margin-left: 10% !important;
     }
+
+    .card-images h2 {
+        margin-left: 6%;
+    }
 }
 
 @media screen and (max-width: 664px) {
     .glass {
-   /* background: rebeccapurple;*/
-        width: 86%;
+    /*background: rgb(172, 4, 128);*/
+        width: 95%;
     }
     /*.dashboard {
         background: rgb(7, 148, 187);
     }*/
+
+    .items .itemTitle {
+        width: 50%;
+    }
 
     .cards {
         margin-left: -20px;
@@ -172,27 +482,37 @@ h3 {
 
     .links {
       /*  background: firebrick;*/
-        margin-left: -80px;
+        margin-left: -30px;
+    }
+
+    .card-images h2 {
+        
+        margin-left: -10px;
     }
 }
-
+/*
 @media screen and (max-width: 573px) {
     .glass {
-      /* background: rgb(84, 4, 164);*/
+       background: rgb(121, 8, 94);
         width: 86%;
     }
     .dashboard {
-       /* background: rgb(41, 203, 87);*/
+       /* background: rgb(41, 203, 87);
         
     }
 
     
-}
+}*/
 
 @media screen and (max-width: 587px) {
+
+    .details {
+        width: 200%;
+    }
+
     .glass {
-       /* background: rgb(228, 98, 11);*/
-        width: 92%;
+        /*background: rgb(228, 98, 11);*/
+        width: 80%;
     }
 
     .dashboard {
@@ -200,22 +520,26 @@ h3 {
     }
 
     .cards {
-      /*  background: rgb(46, 23, 2);*/
-        margin-left: -10%;
+        width: 100%;
+    }
+
+    .card .itemTitle {
+      /*  background: salmon;*/
+        width: 65%;
     }
 
     .link2  {
-       /* background: saddlebrown;*/
-        margin-top: 26px !important;
+       /* background: rgb(7, 142, 169);*/
+        margin-top: -50px !important;
     }
 }
 
 @media screen and (max-width: 546px) {
-    .details {
-        width: 102%;
+    .main {
+        width: 200%;
     }
     .glass {
-       /* background: rgb(223, 3, 105);*
+       /* background: rgb(83, 221, 9);*/
         width: 90%;
     }
 
@@ -254,7 +578,7 @@ h3 {
         font-size: 14px;
     }
     .glass {
-       /*background: rgb(150, 9, 49);*/
+     /* background: rgb(10, 3, 35);*/
         width: 92%;
     }
 
@@ -291,7 +615,7 @@ h3 {
     }
 
     .glass {
-       /*background: #0279db;*/
+       /*background: #0dc5a9;*/
        width: 86%;
         height: 80%;
     }
@@ -304,6 +628,9 @@ h3 {
         height: 80%;
     }
 
+    .card-info {
+        overflow: hidden;
+    }
     .pokemon {
         width: 100%;
         margin-top: 100%;
@@ -327,31 +654,85 @@ h3 {
         font-size: 14px;
     }  
     
-    
+    .card-images img{
+        margin-left: 20% !important;
+    }
+    .card-info .card-images h2 {
+        visibility: hidden;
+    }
     
 }
 
 @media screen and (max-width: 418px) {
-   /* .dashboard {
-        background: salmon;
+    /*.dashboard {
+        background: rgb(12, 116, 186);
     }*/
 
     .glass {
         /*background: darkcyan;*/
         margin-left: -10px;
     }
+    .games .status h1 {
+        visibility: visible;
+        margin-left: -70%;
+        margin-top: 20px;
+    }
 
-   
+    .pokemon .imagePokemon {
+        margin-top: -90px;
+    }
+
+    .cards {
+        margin-top: 180px !important;
+    }
+
+   .pokemon p, h3 {
+    visibility: hidden;
+   }
 
     .pokemon  {
         margin-top: -185px;
         margin-left: 80px;
     }
     .cards {
-      /*  background: hotpink;*/
+       /* background: hotpink;*/
         margin-top: 138px;
         width: 300px;
         margin-left: -140px;
+    }
+
+    .itemTitle {
+        font-size: 13.5px;
+        text-align: center;
+        margin-top: 2px;
+        width: 95% !important;
+    }
+
+    .itemTitle label {
+        width: 60px;
+        line-height: 5px;
+    }
+
+}
+
+@media screen and (max-width: 410px) {
+    /*.dashboard {
+        background: rgb(7, 220, 152);
+    }*/
+
+    .games .status h1 {
+        visibility: visible;
+        margin-left: -65%;
+        margin-top: 15px;
+    }
+
+    .pokemon .imagePokemon {
+        margin-top: -90px;
+    }
+
+    .cards {
+       
+        margin-top: 180px;
     }
 }
 
@@ -361,7 +742,7 @@ h3 {
         width: 115%;
     }
 
-   /* .glass {
+    /*.glass {
         background: darkgreen;
     }*/
     .pokemon {
@@ -404,9 +785,9 @@ h3 {
         width: 120%;
     }
 
-   /* .glass {
+    /*.glass {
         background: skyblue;
-    }*/
+    }**/
     .cards {
         /*background-color: yellow;*/
         width: 180%;
@@ -414,7 +795,7 @@ h3 {
     }
 
     .pokemon {
-        /*background: saddlebrown;*/
+      /*  background: saddlebrown;*/
         margin-left: 50px;
         margin-top: -180px;
     }
@@ -431,9 +812,9 @@ h3 {
         width: 140%;
     }
 
-    /*.glass { background: darkmagenta;}*/
+   /* .glass { background: darkmagenta;}*/
     .cards {
-       /* background: firebrick;*/
+     /*   background: firebrick;*/
         width: 160%;
     }
 
@@ -451,268 +832,4 @@ h3 {
     .card-images img {
         width: 140px !important;
     }
-}
-
-.pokemon .imagePokemon {
-    width: 180px;
-    height: 110%;
-}
-
-
-
-
-
-.links {
-  /*  background: greenyellow;*/
-    width: 100%;
-    margin-top: 20px;
-}
-
-.link h2 {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    gap: 14px;
-  /*  border: solid 2px black;*/
-}
-
-.link span  {
-   /* background: hotpink;*/
-   font-size: 20px;
-   width: 56%;
-   margin: auto;
-}
-
-.link {
-    display: flex;
-    margin: 2rem 0rem;
-    padding: 1rem 5rem;
-    align-items: center;
-    display: flex;
-    margin-top: 15%;
-   /* background: darkgoldenrod;*/
-}
-
-.link2 {
-   /* background: rgb(196, 14, 93);*/
-    margin-top: 50px;
-    
-}
-
-.link3 {
-    margin-top: 50px;
-}
-
-.title-link {
-    
-   /* background: rgb(214, 35, 15);*/
-    height: 20%;
-}
-
-.link2 p {
- /*   background: rgb(46, 33, 2);*/
-    margin-top: 20px;
-    text-transform: uppercase;
-}
-
-
-
-.link3 p {
-   /* background: darkcyan;*/
-    margin-top: 20px;
-    text-transform: uppercase;
-}
-
-.status {
-    margin-bottom: 3rem;
-}
-
-.status h1 {
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.card {
-    display: flex;
-    background: linear-gradient(to left top,rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.5));
-    border-radius: 1rem;
-    margin: 1rem 3rem;
-    padding: 2rem;
-    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
-    justify-content: space-around;
-    width: 80%;
-}
-
-
-.div-moves {
-    width: 120%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: -30px;
-  /*  background: yellow;*/
-}
-
-.div-moves h2 {
-    text-align: center;
-    margin-bottom: 15px;
-    /*background: green;*/
-}
-
-.items {
-   /* background: rgb(196, 7, 7);*/
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.itemTitle {
-    /*background: sienna;*/
-    width: 40%;
-    height: 35px;
-    text-transform: capitalize;
-    font-size: 15px;
-}
-
-.itemTitle p {
-    margin-left: 20px;
-    background: saddlebrown;
-}
-
-/*.items input[type='range'] {
-    -webkit-appearance: none;
-}
-
-.items input[type='range']::-webkit-slider-runnable-track, input[type='range']::-webkit-slider-thumb {
-    -webkit-appearance: none;
-}*/
-
-input[type=range] {
-    width: 100%;
-    margin: 5px 0;
-    background-color: transparent;
-    -webkit-appearance: none;
-  }
-  input[type=range]:focus {
-    outline: none;
-  }
-  input[type=range]::-webkit-slider-runnable-track {
-    background: rgba(48, 113, 169, 0.8);
-    border: 0.6px solid #010101;
-    border-radius: 23.4px;
-    width: 100%;
-    height: 0px;
-    cursor: pointer;
-  }
-  input[type=range]::-webkit-slider-thumb {
-    margin-top: -5.6px;
-    width: 17px;
-    height: 10px;
-    background: rgba(208, 202, 158, 0.9);
-    border: 0;
-    border-radius: 14px;
-    cursor: pointer;
-    -webkit-appearance: none;
-  }
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #72a8d7;
-  }
-  input[type=range]::-moz-range-track {
-    background: rgba(48, 113, 169, 0.8);
-    border: 0.6px solid #010101;
-    border-radius: 23.4px;
-    width: 100%;
-    height: 0px;
-    cursor: pointer;
-  }
-  input[type=range]::-moz-range-thumb {
-    width: 17px;
-    height: 10px;
-    background: rgba(208, 202, 158, 0.9);
-    border: 0;
-    border-radius: 14px;
-    cursor: pointer;
-  }
-  input[type=range]::-ms-track {
-    background: transparent;
-    border-color: transparent;
-    border-width: 6.5px 0;
-    color: transparent;
-    width: 100%;
-    height: 0px;
-    cursor: pointer;
-  }
-  input[type=range]::-ms-fill-lower {
-    background: #173752;
-    border: 0.6px solid #010101;
-    border-radius: 46.8px;
-  }
-  input[type=range]::-ms-fill-upper {
-    background: rgba(48, 113, 169, 0.8);
-    border: 0.6px solid #010101;
-    border-radius: 46.8px;
-  }
-  input[type=range]::-ms-thumb {
-    width: 17px;
-    height: 10px;
-    background: rgba(208, 202, 158, 0.9);
-    border: 0;
-    border-radius: 14px;
-    cursor: pointer;
-    margin-top: 0px;
-    /*Needed to keep the Edge thumb centred*/
-  }
-  input[type=range]:focus::-ms-fill-lower {
-    background: rgba(48, 113, 169, 0.8);
-  }
-  input[type=range]:focus::-ms-fill-upper {
-    background: #72a8d7;
-  }
-  /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-  how to remove the virtical space around the range input in IE*/
-  @supports (-ms-ime-align:auto) {
-    /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-    input[type=range] {
-      margin: 0;
-      /*Edge starts the margin from the thumb, not the track as other browsers do*/
-    }
-  }
-  
-
-
-
-
-
-  
-.items h3 {
-   /* background: rebeccapurple;*/
-    padding: 0px 10px;
-}
-
-.card-info {
-   /* background: rgb(6, 210, 95);*/
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.card-info img {
-    width: 150px;
-    height: 150px;
-    /*background: sienna;*/
-    margin-left: 4%;
-}
-
-.card-images h2 {
-  /*  background: rgb(8, 86, 220);*/
-    text-align: center;
-}
-
-.status h1 {
-    /*background: saddlebrown;*/
-    height: 90px;
 }
