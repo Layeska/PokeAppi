@@ -77,8 +77,8 @@ const PokemonDetails = () => {
                         <div className='pokemon'>
                             <img className='imagePokemon' src={pokemon.sprites?.other.dream_world.front_default} alt="image of pokemon" />
                             <h3>Pokemon Details</h3>
-                            <p ><strong>{pokemon.name}</strong></p>
-                            <p><i>"{characteristic.descriptions?.[7].description}"</i></p>
+                            <p style={{ color: '#0e2180'}}><strong>{pokemon.name}</strong></p>
+                            <p style={{ color: '#0e2180'}}><i>"{characteristic.descriptions?.[7].description}"</i></p>
                         </div>
                         <div className='links'>
                             <div className='link'>
@@ -87,14 +87,14 @@ const PokemonDetails = () => {
                             </div>
                             <div className='link2'>
                                 <h2><b>Types</b></h2>
-                                <p>{pokemon.types?.[0]?.type.name}</p>
-                                <p>{pokemon.types?.[1]?.type.name}</p>
+                                <p style={{ color: '#0e2180'}}>{pokemon.types?.[0]?.type.name}</p>
+                                <p style={{ color: '#0e2180'}}>{pokemon.types?.[1]?.type.name}</p>
                             </div>
                             <div className='link3'>
                                 <h2 className='title-link'> <b>Abilities</b></h2>
-                                <p>{pokemon.abilities?.[0]?.ability.name}</p>
-                                <p>{pokemon.types?.[1]?.type.name}</p>
-                                <p>{pokemon.types?.[2]?.type.name}</p>
+                                <p style={{ color: '#0e2180'}}>{pokemon.abilities?.[0]?.ability.name}</p>
+                                <p style={{ color: '#0e2180'}}>{pokemon.types?.[1]?.type.name}</p>
+                                <p style={{ color: '#0e2180'}}>{pokemon.types?.[2]?.type.name}</p>
                             </div>
                         </div>
                     </div>

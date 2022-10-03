@@ -353,6 +353,91 @@ select::-webkit-scrollbar { display: none; }
   border-bottom: 25px solid rgba(163, 35, 111, 0.5);
 }
 
+@media screen and (max-width: 412px) {
+  .infoBox h2 {
+    color: red !important;
+  }
+  .ribbon {
+    width:401px;
+  }
+  
+  .ribbon .before2 {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 383px) {
+
+  .infoBox h2 {
+    color: rgb(11, 71, 139) !important;
+  }
+  
+  .ribbon {
+    width: 490px !important;
+  }
+
+  .ribbon p {
+    margin-left: -60px !important;
+    text-align: end !important;
+  }
+  
+  .ribbon .before2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .infoBox h2 {
+    color: gold !important;
+  }
+
+  .ribbon .before2 {
+    margin-left: -620px !important;
+  }
+
+  .ribbon p {
+    margin-top: 150px !important;
+  }
+
+} 
+
+@media screen and (max-width: 384px) {
+
+  /*.infoBox h2 {
+    color: rgb(139, 11, 103) !important;
+  }*/
+  
+  .ribbon {
+    width:122%;
+  }
+
+  .ribbon p {
+    text-align: center !important;
+  }
+  
+  .ribbon .before2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .infoBox h2 {
+    color: salmon !important;
+  }
+
+  .ribbon .before2 {
+    margin-top: -290px !important;
+    margin-left: -50px;
+  }
+}
+
+
+@media screen  and (max-width: 480px ){
+  .ribbon .before2 {
+    margin-top: -250px;
+  }
+}
+
 .containerPokemon .pokemonCard .imgBox{
   position: absolute;
   top: 50%;
@@ -510,8 +595,9 @@ select::-webkit-scrollbar { display: none; }
 
 .message {
   text-align: center;
-  width: 40%;
+  width: 80%;
   font-size: 23px;
+  color: var(--color-white) !important;
 }
 
 .ball {
